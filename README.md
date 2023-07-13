@@ -1,8 +1,9 @@
 # ArchMars
-Esta es mi configuracion personal de Arch y no recomiendo usarla en tu maquina
-Editalo a tu gusto
+Esta es mi configuracion personal de Arch y no recomiendo usarla en tu maquina.
 
-Asegúrese de que base-devel esté instalado antes de continuar
+Editalo a tu gusto para evitar errores.
+
+Asegúrese de que base-devel esté instalado antes de continuar.
 
 
 # Problemas conocidos
