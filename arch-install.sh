@@ -54,36 +54,36 @@ sleep 2
 
 # Instalaciones por Flatpak
 echo "Instalando Aplicaciones por Flatpak"
-flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME    \
+flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
     com.discordapp.Discord com.github.tchx84.Flatseal 
 
 # Instalaciobes de yay
-yay -Syu --noconfirm waybar-hyprland-git hyprpicker-git hyprpaper           \
-    polkit-gnome wlogout viewnior-git playerctl-git pamac-aur bashtop-git   \
+yay -S waybar-hyprland-git hyprpicker-git hyprpaper eww-wayland-git \
+    polkit-gnome wlogout viewnior-git playerctl-git pamac-aur bashtop-git \
     grimblast-git gtklock nwg-look-bin dunst otf-sora heroic-games-launcher \
-    otf-firamono-nerd inter-font ttf-comfortaa ttf-icomoon-feather          \
-    eww-wayland-git rofi-lbonn-wayland-git sddm-git
+    otf-firamono-nerd inter-font ttf-comfortaa ttf-icomoon-feather \
+    rofi-lbonn-wayland-git
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
-sudo pacman -Syu --needed --noconfirm hyprland xdg-desktop-portal-hyprland  \
-    kitty neofetch thunderbird steam lutris rofi ffmpeg neovim zsh mpv imv  \
-    ffmpegthumbnailer wine-staging virt-manager pavucontrol nautilus gimp   \
-    qemu-full wl-clipboard wf-recorder brightnessctl tumbler gtk3 firefox   \
-    ttf-daddytime-mono-nerd noise-suppression-for-voice pamixer upower      \
+sudo pacman -Syu --needed --noconfirm hyprland xdg-desktop-portal-hyprland \
+    kitty neofetch thunderbird steam lutris rofi ffmpeg neovim zsh mpv imv \
+    ffmpegthumbnailer wine-staging virt-manager pavucontrol nautilus gimp \
+    qemu-full wl-clipboard wf-recorder brightnessctl tumbler gtk3 firefox \
+    ttf-daddytime-mono-nerd noise-suppression-for-voice pamixer upower \
     qt5-wayland qt6-wayland wayland alsa-utils inotify-tools gjs socat acpi \
-    gedit bashtop dunst gnome-disk-utility gamemode winetricks timeshift    \
-    firefox lightdm lightdm-gtk-greeter wine-staging giflib lib32-giflib    \
-    libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls mpg123    \
-    lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils libpulse     \
-    lib32-libpulse libgpg-error lib32-libgpg-error alsa-plugins             \
-    lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-mesa     \
-    lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite vulkan-radeon     \
-    libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama ncurses         \
-    lib32-ncurses ocl-icd lib32-ocl-icd libxslt lib32-libxslt libva         \
-    lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-libxcomposite   \
-    lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader   \
-    lib32-vulkan-radeon 
+    gedit bashtop dunst gnome-disk-utility gamemode winetricks timeshift \
+    firefox lightdm lightdm-gtk-greeter wine-staging giflib lib32-giflib \
+    libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls mpg123 \
+    lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils libpulse \
+    lib32-libpulse libgpg-error lib32-libgpg-error alsa-plugins \
+    lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-mesa \
+    lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite vulkan-radeon \
+    libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama ncurses \
+    lib32-ncurses ocl-icd lib32-ocl-icd libxslt lib32-libxslt libva \
+    lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-libxcomposite \
+    lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader \
+    lib32-vulkan-radeon
 
 # Recargar Fuentes
 fc-cache -vf
