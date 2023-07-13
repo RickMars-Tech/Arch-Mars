@@ -32,8 +32,8 @@ if [ -f "$ISyay" ]; then
     printf "\n%s - yay fue localizado, siguiendo adelante.\n" "$GREEN"
 else
     printf "\n%s - yay no esta instalado\n" "$YELLOW"
-    git clone https://aur.archlinux.org/yay.git
-    cd yay
+    git clone https://aur.archlinux.org/yay-bin
+    cd yay-bin
     makepkg -si --noconfirm 2>&1 | tee -a "$LOG"
     cd ..
 fi
@@ -182,4 +182,4 @@ fi
 sleep 2
 
 # Habilitar sddm
-systemctl enable sddm
+sudo systemctl enable lightdm
