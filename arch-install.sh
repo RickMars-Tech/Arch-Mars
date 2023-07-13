@@ -25,27 +25,22 @@ fwupdmgr refresh
 fwupdmgr get-updates
 fwupdmgr update
 
-# Checar si yay esta instalado
+# Checar si yay está instalado
 ISyay="/sbin/yay"
 
 if [ -f "$ISyay" ]; then
-    printf "\n%s - yay was located, moving on.\n" "$GREEN"
+    printf "\n%s - yay fue localizado, siguiendo adelante.\n" "$GREEN"
 else
-    printf "\n%s - yay was NOT located\n" "$YELLOW"
-    read -n1 -rep "${CAT} Would you like to install yay (y,n)" INST
-    if [[ $INST =~ ^[Yy]$ ]]; then
-        git clone https://aur.archlinux.org/yay.git
-        cd yay
-        makepkg -si --noconfirm 2>&1 | tee -a "$LOG"
-        cd ..
-    else
-        printf "%s - yay is required for this script, now exiting\n" "$RED"
-        exit
-    fi
-    # Actualiza el sistema antes de proceder
-    printf "${YELLOW} System Update to avoid issue\n"
-    yay -Syu --noconfirm 2>&1 | tee -a "$LOG"
+    printf "\n%s - yay no esta instalado\n" "$YELLOW"
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si --noconfirm 2>&1 | tee -a "$LOG"
+    cd ..
 fi
+
+# Actualizar el sistema antes de proceder
+printf "${YELLOW} Actualización del sistema para evitar problemas\n"
+yay -Syu --noconfirm 2>&1 | tee -a "$LOG"
 
 # Activar Repositorio de Flatpak
 sudo pacman -S flatpak
