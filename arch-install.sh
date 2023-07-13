@@ -82,7 +82,7 @@ sudo pacman -Syu --needed --noconfirm hyprland xdg-desktop-portal-hyprland \
     lib32-ncurses ocl-icd lib32-ocl-icd libxslt lib32-libxslt libva \
     lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-libxcomposite \
     lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader \
-    lib32-vulkan-radeon polkit-gnome
+    lib32-vulkan-radeon polkit-gnome papirus-icon-theme
 
 # Recargar Fuentes
 fc-cache -vf
