@@ -110,13 +110,13 @@ chmod +x ~/.config/hypr/gamemode.sh
 
 #~~ ZRAM-GENERATOR
 
-# 0/Verificar modulo de zram
+# 0/Verificar módulo de zram
 if sudo grep -q "^[zram0]$" /etc/systemd/zram-generator.conf; then
     echo "[zram0] ya está configurado en zstd"
 else
     # Agregar "[zram0]" al final del archivo
-    sudo echo "[zram0]" >> /etc/systemd/zram-generator.conf
-    echo -e "El modulo [zram0] se ha establecido"
+    echo "[zram0]" | sudo tee -a /etc/systemd/zram-generator.conf > /dev/null
+    echo -e "El módulo [zram0] se ha establecido"
 fi
 
 # 1/Verificar tamaño de zram
@@ -124,7 +124,7 @@ if sudo grep -q "^zram-size = ram / 2$" /etc/systemd/zram-generator.conf; then
     echo "compression-algorithm ya está configurado en zstd"
 else
     # Agregar "zram-size = ram / 2" al final del archivo
-    sudo echo "zram-size = ram / 2" >> /etc/systemd/zram-generator.conf
+    echo "zram-size = ram / 2" | sudo tee -a /etc/systemd/zram-generator.conf > /dev/null
     echo -e "El tamaño se ha configurado"
 fi
 
@@ -133,7 +133,7 @@ if sudo grep -q "^compression-algorithm = zstd$" /etc/systemd/zram-generator.con
     echo "compression-algorithm ya está configurado en zstd"
 else
     # Agregar "compression-algorithm = zstd" al final del archivo
-    sudo echo "compression-algorithm = zstd" >> /etc/systemd/zram-generator.conf
+    echo "compression-algorithm = zstd" | sudo tee -a /etc/systemd/zram-generator.conf > /dev/null
     echo -e "compression-algorithm se ha configurado en zstd"
 fi
 
@@ -142,7 +142,7 @@ if sudo grep -q "^swap-priority = 100$" /etc/systemd/zram-generator.conf; then
     echo "swap-priority ya está configurado"
 else
     # Agregar "swap-priority = 100" al final del archivo
-    sudo echo "swap-priority = 100" >> /etc/systemd/zram-generator.conf
+    echo "swap-priority = 100" | sudo tee -a /etc/systemd/zram-generator.conf > /dev/null
     echo -e "swap-priority se ha configurado en zstd"
 fi
 
@@ -151,9 +151,10 @@ if sudo grep -q "^fs-type = swap$" /etc/systemd/zram-generator.conf; then
     echo "fs-type ya está configurado en zstd"
 else
     # Agregar "fs-type = swap" al final del archivo
-    sudo echo "fs-type = swap" >> /etc/systemd/zram-generator.conf
+    echo "fs-type = swap" | sudo tee -a /etc/systemd/zram-generator.conf > /dev/null
     echo -e "fs-type se ha configurado en zstd"
 fi
+
 
 # Optimizaciones de VM (Memoria Virtual)
 echo -e "vm.max_map_count=1048576\nvm.swappiness=5\nnet.ipv4.tcp_timestamps = 0\nnet.ipv4.tcp_sack = 1\nnet.ipv4.tcp_no_metrics_save = 1\n#### Escalando TCP ####\nnet.ipv4.tcp_window_scaling = 1" | sudo tee -a /etc/sysctl.d/90-override.conf > /dev/null
