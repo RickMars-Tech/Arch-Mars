@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Minecraft
+Comment=Minecraft
+Icon=/mnt/sdb1/SKLauncher/icon.png
+Exec= java -jar -Dsun.java3d.opengl=true /mnt/sdb1/SKLauncher/SKlauncher.jar
+Terminal=false
+Categories=Minecraft;game
