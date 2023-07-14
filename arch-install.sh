@@ -99,7 +99,7 @@ cp -r dotconfig/config/user-dirs.dirs ~/.config/
 
 printf " Copiando archivos extra...\n"
 cp -r applications/ /home/rick/.local/share/
-cp -r wal/ /opt/
+cp -r wal/ ~/wal/
 
 printf " Dando permisos a archivos...\n"
 chmod +x ~/.config/hypr/xdg-portal-hyprland
