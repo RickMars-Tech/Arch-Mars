@@ -157,7 +157,7 @@ echo -e "vm.max_map_count=1048576\nvm.swappiness=5\nnet.ipv4.tcp_timestamps = 0\
 #~~ KERNEL
 
 # Definir las variables que quieres establecer en el Kernel
-options="quiet splash loglevel=3 mitigations=auto,nosmt amd_iommu=on transparent_hugepage=always vfio-pci.ids=1002:1638,1002:1637"
+options="quiet splash loglevel=3 mitigations=auto,nosmt amd_iommu=on transparent_hugepage=always"
 
 # Ruta del archivo de configuración de GRUB
 grub_config="/etc/default/grub"
