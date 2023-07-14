@@ -53,10 +53,10 @@ flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
     com.discordapp.Discord com.github.tchx84.Flatseal 
 
 # Instalaciobes de yay
-yay -S waybar-hyprland-git hyprpicker-git eww-wayland-git \
+yay -S waybar-hyprland-git hyprpicker-git eww-wayland-git grimblast-git \
     wlogout viewnior-git playerctl-git pamac-aur bashtop-git timeshift \
-    grimblast-git gtklock nwg-look-bin otf-sora heroic-games-launcher \
-    ttf-comfortaa ttf-icomoon-feather rofi-lbonn-wayland-git 
+    gtklock nwg-look-bin otf-sora heroic-games-launcher ttf-icomoon-feather \
+    ttf-comfortaa rofi-lbonn-wayland-git lightdm-webkit-theme-aether
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
