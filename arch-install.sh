@@ -56,7 +56,7 @@ flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
 paru -S waybar-hyprland-git hyprpicker-git eww-wayland-git grimblast-git \
     wlogout viewnior-git playerctl-git pamac-aur bashtop-git timeshift \
     gtklock nwg-look-bin otf-sora heroic-games-launcher ttf-icomoon-feather \
-    ttf-comfortaa rofi-lbonn-wayland-git lightdm-webkit-theme-aether
+    ttf-comfortaa rofi-lbonn-wayland-git sddm-git
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
@@ -67,7 +67,7 @@ sudo pacman -Syu --needed --noconfirm hyprland xdg-desktop-portal-hyprland \
     ttf-daddytime-mono-nerd noise-suppression-for-voice pamixer upower \
     qt5-wayland qt6-wayland wayland alsa-utils inotify-tools gjs socat acpi \
     gedit bashtop dunst gnome-disk-utility gamemode winetricks \
-    firefox lightdm lightdm-gtk-greeter wine-staging giflib lib32-giflib \
+    firefox polkit-gnome papirus-icon-theme wine-staging giflib lib32-giflib \
     libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls mpg123 \
     lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils libpulse \
     lib32-libpulse libgpg-error lib32-libgpg-error alsa-plugins \
@@ -77,7 +77,7 @@ sudo pacman -Syu --needed --noconfirm hyprland xdg-desktop-portal-hyprland \
     lib32-ncurses ocl-icd lib32-ocl-icd libxslt lib32-libxslt libva \
     lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-libxcomposite \
     lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader \
-    lib32-vulkan-radeon polkit-gnome papirus-icon-theme
+    lib32-vulkan-radeon 
 
 # Recargar Fuentes
 fc-cache -vf
@@ -183,4 +183,4 @@ fi
 sleep 2
 
 # Habilitar sddm
-sudo systemctl enable lightdm
+sudo systemctl enable sddm
