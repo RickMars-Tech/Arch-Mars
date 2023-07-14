@@ -25,17 +25,17 @@ fwupdmgr refresh
 fwupdmgr get-updates
 fwupdmgr update
 
-# Checar si yay está instalado
-ISyay="/sbin/yay"
-
-if [ -f "$ISyay" ]; then
-    printf "\n%s - yay fue localizado, siguiendo adelante.\n" "$GREEN"
+# Checar si paru está instalado
+if command -v paru &>/dev/null; then
+  echo "Paru $(paru -V | awk '{print $2}') is already installed in your system"
 else
-    printf "\n%s - yay no esta instalado\n" "$YELLOW"
-    git clone https://aur.archlinux.org/yay-bin
-    cd yay-bin
-    makepkg -si --noconfirm 2>&1 | tee -a "$LOG"
-    cd ..
+  if command -v yay &>/dev/null; then
+    echo "Yay $(yay -V | awk '{print $2}') is installed in your system"
+  else
+    echo "Neither Paru nor Yay is present in your system."
+    echo "Installing Paru..."
+    git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si --noconfirm && cd ..
+  fi
 fi
 
 # Actualizar el sistema antes de proceder
@@ -53,7 +53,7 @@ flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
     com.discordapp.Discord com.github.tchx84.Flatseal 
 
 # Instalaciobes de yay
-yay -S waybar-hyprland-git hyprpicker-git eww-wayland-git grimblast-git \
+paru -S waybar-hyprland-git hyprpicker-git eww-wayland-git grimblast-git \
     wlogout viewnior-git playerctl-git pamac-aur bashtop-git timeshift \
     gtklock nwg-look-bin otf-sora heroic-games-launcher ttf-icomoon-feather \
     ttf-comfortaa rofi-lbonn-wayland-git lightdm-webkit-theme-aether
@@ -101,6 +101,7 @@ printf " Dando permisos a archivos...\n"
 chmod +x ~/.config/hypr/xdg-portal-hyprland
 chmod +x ~/.config/hypr/minimize-steam
 chmod +x ~/.config/hypr/gamemode.sh
+chmod +x ~/.config/eww/scripts/init
 
 #~~ ZRAM-GENERATOR
 
