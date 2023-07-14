@@ -101,7 +101,23 @@ printf " Dando permisos a archivos...\n"
 chmod +x ~/.config/hypr/xdg-portal-hyprland
 chmod +x ~/.config/hypr/minimize-steam
 chmod +x ~/.config/hypr/gamemode.sh
+# Scripts de eww
+chmod +x ~/.config/eww/scripts/apps
+chmod +x ~/.config/eww/scripts/bluetooth
+chmod +x ~/.config/eww/scripts/brightness
+chmod +x ~/.config/eww/scripts/events
+chmod +x ~/.config/eww/scripts/hyprland
 chmod +x ~/.config/eww/scripts/init
+chmod +x ~/.config/eww/scripts/launcher
+chmod +x ~/.config/eww/scripts/network
+chmod +x ~/.config/eww/scripts/night_light
+chmod +x ~/.config/eww/scripts/notifications
+chmod +x ~/.config/eww/scripts/osd
+chmod +x ~/.config/eww/scripts/player
+chmod +x ~/.config/eww/scripts/power
+chmod +x ~/.config/eww/scripts/theme
+chmod +x ~/.config/eww/scripts/volume
+chmod +x ~/.config/eww/scripts/weather
 
 #~~ ZRAM-GENERATOR
 
