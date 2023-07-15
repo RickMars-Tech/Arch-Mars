@@ -70,7 +70,7 @@ pacman -Syu --needed --noconfirm acpi alsa-lib alsa-plugins bashtop \
     bluez brightnessctl dunst ffmpeg ffmpegthumbnailer firefox gamemode \
     gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs gimp \
     gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk \
-    jq kitty lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls \
+    jq kitty lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls qt5ct \
     lib32-gpg-error lib32-gst-plugins-base-libs lib32-libjpeg-turbo lib32-libldap \
     lib32-libpng lib32-libxcomposite lib32-libxinerama lib32-mesa lib32-mpg123 \
     lib32-ncurses lib32-openal lib32-ocl-icd lib32-sqlite lib32-v4l-utils lib32-va \
@@ -81,7 +81,8 @@ pacman -Syu --needed --noconfirm acpi alsa-lib alsa-plugins bashtop \
     papirus-icon-theme pavucontrol polkit-gnome puma-dev qt5-wayland qt5ct \
     qt6-wayland qemu-full ranger rofi socat sqlite steam thunderbird tumbler upower \
     v4l-utils virt-manager vulkan-icd-loader wayland wf-recorder winetricks \
-    wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland zsh
+    wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland zsh kvantum lxappearance \
+    acpi
 
 # Recargar Fuentes
 fc-cache -vf
