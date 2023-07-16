@@ -189,7 +189,7 @@ sleep 2
 printf " Instalando tema de Sddm...\n"
 sudo cp -r sddm/Elegant/ /usr/share/sddm/themes/
 sudo mkdir /etc/sddm.config
-sudo sed -i "s/^Current=.*/Current=Elegant/g" | sudo tee -e /etc/sddm.conf > /dev/null
+sudo sed -i "s/^Current=.*/Current=Elegant/g" /etc/sddm.conf
 echo "El tema ha sido instalado correctamente."
 
 sleep 3
