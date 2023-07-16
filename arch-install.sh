@@ -45,9 +45,13 @@ else
   fi
 fi
 
+sleep 2
+
 # Actualizar el sistema antes de proceder
 printf "${YELLOW} Actualización del sistema para evitar problemas\n"
 sudo pacman -Syu --noconfirm && sudo powerpill -Su && paru -Sua 2>&1 | tee -a "$LOG"
+
+sleep 2
 
 # Activar Repositorio de Flatpak
 sudo pacman -S flatpak
@@ -67,9 +71,9 @@ sudo paru -S bashtop-git eww-wayland-git grimblast-git gtklock \
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
-sudo pacman -Syu --needed --noconfirm acpi alsa-lib alsa-plugins bashtop \
-    bluez brightnessctl dunst ffmpeg ffmpegthumbnailer firefox gamemode \
-    gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs gimp \
+sudo pacman -S --noconfirm acpi alsa-lib alsa-plugins bashtop bluez \
+    brightnessctl dunst ffmpeg ffmpegthumbnailer firefox gamemode gedit \
+    giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs gimp \
     gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk \
     jq kitty kvantum lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls \
     qt5ct lib32-gpg-error lib32-gst-plugins-base-libs lib32-libjpeg-turbo \
@@ -89,8 +93,7 @@ fc-cache -vf
 
 # Moviendo "cosas"
 printf " Copiando archivos de configuracion...\n"
-mkdir -p ~/.config
-cp -R config/* ~/.config/
+cp -r dotconfig/config/* ~/.config/
 
 printf " Copiando archivos extra...\n"
 sudo cp -r applications/ ~/.local/share/
@@ -184,8 +187,9 @@ sleep 2
 
 # Instalando tema de Sddm
 printf " Instalando tema de Sddm...\n"
-sudo cp -r sddm/Elegant/ /usr/share/sddm/themes/
-sudo sed -i "s/^Current=.*/Current=Elegant/g" /etc/sddm.conf
+sudo cp -r Elegant /usr/share/sddm/themes/
+sudo mkdir /etc/sddm.config
+sudo sed -i "s/^Current=.*/Current=Elegant/g" | sudo tee -e /etc/sddm.conf > /dev/null
 echo "El tema ha sido instalado correctamente."
 
 sleep 3
