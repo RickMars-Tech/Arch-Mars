@@ -26,19 +26,18 @@ fwupdmgr get-updates
 fwupdmgr update
 
 # Agregar repo de Chaotic-Aur
-pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-pacman-key --lsign-key 3056513887B78AEB
-pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign-key 3056513887B78AEB
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-echo -e "[chaotic-aur]
-Include = /etc/pacman.d/chaotic-mirrorlist " sudo tee -a /etc/pacman.conf > /dev/null
+echo -e "[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf > /dev/null
 echo -e "Se ha configurado Chaotic-Aur"
 
 # Checar si paru está instalado
-if command -v paru &>/dev/null; then
+if command -v paru >/dev/null; then
   echo "Paru $(paru -V | awk '{print $2}') is already installed in your system"
 else
-  if command -v yay &>/dev/null; then
+  if command -v yay >/dev/null; then
     echo "Yay $(yay -V | awk '{print $2}') is installed in your system"
   else
     echo "Neither Paru nor Yay is present in your system."
