@@ -111,5 +111,5 @@ source $ZSH/oh-my-zsh.sh
 #wal -q -n -i  "$wallpaper"
 #clear
 
-#Fastfetch
-fastfetch
+#Neofetch
+neofetch
