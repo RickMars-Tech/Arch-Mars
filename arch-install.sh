@@ -202,5 +202,13 @@ fi
 
 sleep 2
 
+# Instalando tema de Sddm
+printf " Instalando tema de Sddm...\n"
+cp -r sddm/Elegant/ /usr/share/sddm/themes/
+sudo sed -i "s/^Current=.*/Current=Elegant/g" /etc/sddm.conf
+echo "El tema ha sido instalado correctamente."
+
+sleep 3
+
 # Habilitar sddm
 sudo systemctl enable sddm
