@@ -58,10 +58,10 @@ flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
     com.discordapp.Discord com.github.tchx84.Flatseal 
 
 # Instalaciobes de yay
-paru -S --noconfirm bashtop-git eww-wayland-git fastfetch grimblast-git gtklock \
-    heroic-games-launcher-bin hyprpicker-git nwg-look-bin otf-sora pamac-aur playerctl-git \
-    rofi-lbonn-wayland-git sddm-git timeshift ttf-comfortaa ttf-icomoon-feather \
-    viewnior-git waybar-hyprland-git wlogout
+paru -S --noconfirm bashtop-git eww-wayland-git grimblast-git gtklock \
+    heroic-games-launcher-bin hyprpicker-git nwg-look-bin otf-sora pamac-aur \
+    playerctl-git rofi-lbonn-wayland-git sddm-git timeshift ttf-comfortaa \
+    ttf-icomoon-feather viewnior-git waybar-hyprland-git wlogout
     
 
 # Instalaciones por Pacman
@@ -70,14 +70,14 @@ pacman -Syu --needed --noconfirm acpi alsa-lib alsa-plugins bashtop \
     bluez brightnessctl dunst ffmpeg ffmpegthumbnailer firefox gamemode \
     gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs gimp \
     gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk \
-    jq kitty kvantum lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls qt5ct \
-    lib32-gpg-error lib32-gst-plugins-base-libs lib32-libjpeg-turbo lib32-libldap \
-    lib32-libpng lib32-libxcomposite lib32-libxinerama lib32-mesa lib32-mpg123 \
-    lib32-ncurses lib32-openal lib32-ocl-icd lib32-sqlite lib32-v4l-utils lib32-va \
-    lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo libldap \
-    libpng libpulse libxcomposite libxinerama libxslt libva libvulkan-icd-loader \
+    jq kitty kvantum lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls \
+    qt5ct lib32-gpg-error lib32-gst-plugins-base-libs lib32-libjpeg-turbo \
+    lib32-libldap lib32-libpng lib32-libxcomposite lib32-libxinerama lib32-mesa \
+    lib32-mpg123 lib32-ncurses lib32-openal lib32-ocl-icd lib32-sqlite lib32-v4l-utils \
+    lib32-va lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo \
+    libldap libpng libpulse libxcomposite libxinerama libxslt libva libvulkan-icd-loader \
     libvulkan-radeon libxwayland lutris lxappearance mpv ncurses nautilus networkmanager \
-    neovim nm-connection-editor noise-suppression-for-voice ocl-icd openal pamixer \
+    neovim neofetch nm-connection-editor noise-suppression-for-voice ocl-icd openal pamixer \
     papirus-icon-theme pavucontrol polkit-gnome puma-dev qt5-wayland qt5ct \
     qt6-wayland qemu-full ranger rofi socat sqlite steam thunderbird tumbler upower \
     v4l-utils virt-manager vulkan-icd-loader wayland wf-recorder winetricks \
