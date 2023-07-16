@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Antes de usarlo, ten en cuenta que esta es la forma en la que yo configuro mi sistema.
 # Personalízalo a tu gusto para evitar errores.
 
@@ -61,7 +60,7 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
     com.discordapp.Discord com.github.tchx84.Flatseal 
 
 # Instalaciobes por paru
-sudo paru -Syu bashtop-git eww-wayland-git grimblast-git gtklock \
+sudo paru -S bashtop-git eww-wayland-git grimblast-git gtklock \
     heroic-games-launcher-bin hyprpicker-git nwg-look-bin otf-sora pamac-aur \
     playerctl-git rofi-lbonn-wayland-git sddm-git timeshift ttf-comfortaa \
     ttf-icomoon-feather viewnior-git waybar-hyprland-git wlogout
@@ -102,22 +101,7 @@ chmod +x ~/.config/hypr/xdg-portal-hyprland
 chmod +x ~/.config/hypr/minimize-steam
 chmod +x ~/.config/hypr/gamemode.sh
 # Scripts de eww
-chmod +x ~/.config/eww/scripts/apps
-chmod +x ~/.config/eww/scripts/bluetooth
-chmod +x ~/.config/eww/scripts/brightness
-chmod +x ~/.config/eww/scripts/events
-chmod +x ~/.config/eww/scripts/hyprland
 chmod +x ~/.config/eww/scripts/init
-chmod +x ~/.config/eww/scripts/launcher
-chmod +x ~/.config/eww/scripts/network
-chmod +x ~/.config/eww/scripts/night_light
-chmod +x ~/.config/eww/scripts/notifications
-chmod +x ~/.config/eww/scripts/osd
-chmod +x ~/.config/eww/scripts/player
-chmod +x ~/.config/eww/scripts/power
-chmod +x ~/.config/eww/scripts/theme
-chmod +x ~/.config/eww/scripts/volume
-chmod +x ~/.config/eww/scripts/weather
 
 #~~ ZRAM-GENERATOR
 
