@@ -60,8 +60,8 @@ echo "Instalando Aplicaciones por Flatpak"
 sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
     com.discordapp.Discord com.github.tchx84.Flatseal 
 
-# Instalaciobes de yay
-sudo paru -S --noconfirm bashtop-git eww-wayland-git grimblast-git gtklock \
+# Instalaciobes por paru
+sudo paru -Syu bashtop-git eww-wayland-git grimblast-git gtklock \
     heroic-games-launcher-bin hyprpicker-git nwg-look-bin otf-sora pamac-aur \
     playerctl-git rofi-lbonn-wayland-git sddm-git timeshift ttf-comfortaa \
     ttf-icomoon-feather viewnior-git waybar-hyprland-git wlogout
@@ -90,14 +90,8 @@ fc-cache -vf
 
 # Moviendo "cosas"
 printf " Copiando archivos de configuracion...\n"
-cp -r dotconfig/config/eww/ ~/.config/
-cp -r dotconfig/config/gtklock/ ~/.config/
-cp -r dotconfig/config/hypr/ ~/.config/ 
-cp -r dotconfig/config/kitty/ ~/.config/
-cp -r dotconfig/config/mpv/ ~/.config/
-cp -r dotconfig/config/neofetch/ ~/.config/
-cp -r dotconfig/config/rofi/ ~/.config/
-cp -r dotconfig/config/user-dirs.dirs ~/.config/
+mkdir -p ~/.config
+cp -R config/* ~/.config/
 
 printf " Copiando archivos extra...\n"
 sudo cp -r applications/ ~/.local/share/
