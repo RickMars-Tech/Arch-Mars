@@ -170,9 +170,9 @@ else
     echo -e "fs-type se ha configurado en zstd"
 fi
 
-
 # Optimizaciones de VM (Memoria Virtual)
-echo -e "vm.max_map_count=1048576\nvm.swappiness=5\nnet.ipv4.tcp_timestamps = 0\nnet.ipv4.tcp_sack = 1\nnet.ipv4.tcp_no_metrics_save = 1\n#### Escalando TCP ####\nnet.ipv4.tcp_window_scaling = 1" | sudo tee -a /etc/sysctl.d/90-override.conf > /dev/null
+echo -e "vm.max_map_count=1048576
+vm.swappiness=5" | sudo tee -a /etc/sysctl.d/90-override.conf > /dev/null
 
 #~~ KERNEL
 
