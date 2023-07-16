@@ -3,11 +3,6 @@
 # Antes de usarlo, ten en cuenta que esta es la forma en la que yo configuro mi sistema.
 # Personalízalo a tu gusto para evitar errores.
 
-if [[ $EUID -ne 0 ]]; then
-   echo "Este Script debe ejecutarse con privilegios de administrador"
-   exit 1
-fi
-
 # Define variables
 GREEN="$(tput setaf 2)[OK]$(tput sgr0)"
 RED="$(tput setaf 1)[ERROR]$(tput sgr0)"
@@ -18,13 +13,13 @@ LOG="install.log"
 # Verificar si fwupd está instalado
 if ! command -v fwupdmgr &> /dev/null; then
     echo "fwupd no está instalado. Instalando..."
-    pacman -Syu --noconfirm fwupd
+    sudo pacman -Syu --noconfirm fwupd
 else
     echo "fwupd está instalado."
 fi
 
 echo "Actualizando paquetes y firmware"
-pacman -Syyu --noconfirm
+sudo pacman -Syyu --noconfirm
 fwupdmgr get-devices
 fwupdmgr refresh
 fwupdmgr get-updates
@@ -57,13 +52,13 @@ printf "${YELLOW} Actualización del sistema para evitar problemas\n"
 sudo pacman -Sy --noconfirm && sudo powerpill -Su --noconfirm && paru -Su --noconfirm 2>&1 | tee -a "$LOG"
 
 # Activar Repositorio de Flatpak
-pacman -S flatpak
+sudo pacman -S flatpak
 
 sleep 2
 
 # Instalaciones por Flatpak
 echo "Instalando Aplicaciones por Flatpak"
-flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
+sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
     com.discordapp.Discord com.github.tchx84.Flatseal 
 
 # Instalaciobes de yay
@@ -71,11 +66,10 @@ paru -S --noconfirm bashtop-git eww-wayland-git grimblast-git gtklock \
     heroic-games-launcher-bin hyprpicker-git nwg-look-bin otf-sora pamac-aur \
     playerctl-git rofi-lbonn-wayland-git sddm-git timeshift ttf-comfortaa \
     ttf-icomoon-feather viewnior-git waybar-hyprland-git wlogout
-    
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
-pacman -Syu --needed --noconfirm acpi alsa-lib alsa-plugins bashtop \
+sudo pacman -Syu --needed --noconfirm acpi alsa-lib alsa-plugins bashtop \
     bluez brightnessctl dunst ffmpeg ffmpegthumbnailer firefox gamemode \
     gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs gimp \
     gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk \
@@ -107,8 +101,8 @@ cp -r dotconfig/config/rofi/ ~/.config/
 cp -r dotconfig/config/user-dirs.dirs ~/.config/
 
 printf " Copiando archivos extra...\n"
-cp -r applications/ /home/rick/.local/share/
-cp -r wal/ ~/wal/
+sudo cp -r applications/ ~/.local/share/
+sudo cp -r wal/ ~/wal/
 
 printf " Dando permisos a archivos...\n"
 chmod +x ~/.config/hypr/xdg-portal-hyprland
