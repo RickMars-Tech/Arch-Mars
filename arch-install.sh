@@ -63,7 +63,7 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
 sudo paru -S bashtop-git eww-wayland-git grimblast-git gtklock \
     heroic-games-launcher-bin hyprpicker-git nwg-look-bin otf-sora pamac-aur \
     playerctl-git rofi-lbonn-wayland-git sddm-git timeshift ttf-comfortaa \
-    ttf-icomoon-feather viewnior-git waybar-hyprland-git wlogout
+    ttf-icomoon-feather viewnior-git wlogout
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
