@@ -48,7 +48,7 @@ fi
 
 # Actualizar el sistema antes de proceder
 printf "${YELLOW} Actualización del sistema para evitar problemas\n"
-sudo pacman -Sy --noconfirm && sudo powerpill -Su --noconfirm && paru -Su --noconfirm 2>&1 | tee -a "$LOG"
+sudo pacman -Syu --noconfirm && sudo powerpill -Su && paru -Sua 2>&1 | tee -a "$LOG"
 
 # Activar Repositorio de Flatpak
 sudo pacman -S flatpak
