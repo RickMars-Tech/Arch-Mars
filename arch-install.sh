@@ -46,7 +46,7 @@ else
   else
     echo "Neither Paru nor Yay is present in your system."
     echo "Installing Paru..."
-    git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ..
+    git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si && cd ..
   fi
 fi
 
@@ -69,12 +69,11 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
     com.discordapp.Discord com.github.tchx84.Flatseal 
 
 # Instalaciobes por paru
-yay -S bashtop-git eww-wayland-git grimblast-git gtklock \
-    heroic-games-launcher-bin hyprpicker-git nwg-look-bin otf-sora pamac-aur \
-    playerctl-git rofi-lbonn-wayland-git sddm-git timeshift ttf-comfortaa \
-    ttf-icomoon-feather viewnior-git wlogout powerpill acpi alsa-lib alsa-plugins \
-    bashtop bat bluez brightnessctl dunst ffmpeg ffmpegthumbnailer firefox gamemode \
-    gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs gimp \
+Paru bashtop-git eww-wayland-git grimblast-git gtklock heroic-games-launcher-bin \
+    hyprpicker-git nwg-look-bin otf-sora pamac-aur playerctl-git rofi-lbonn-wayland-git \
+    sddm-git timeshift ttf-comfortaa ttf-icomoon-feather viewnior-git wlogout powerpill \
+    acpi alsa-lib alsa-plugins bashtop bat bluez brightnessctl dunst ffmpeg ffmpegthumbnailer \
+    firefox gamemode gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs gimp \
     gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk \
     jq kitty kvantum lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls \
     qt5ct lib32-gpg-error lib32-gst-plugins-base-libs lib32-libjpeg-turbo \
