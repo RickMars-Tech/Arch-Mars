@@ -1,5 +1,10 @@
 #!/usr/bin/bash
 
+if [[ $EUID -eq 0 ]]; then
+   echo "Este script no debe ejecutarse con privilegios de administrador"
+   exit 1
+fi
+
 # Verificar si Zsh ya está configurado como el intérprete predeterminado
 if [[ $(basename "$SHELL") != "zsh" ]]; then
   # Establecer Zsh como el intérprete predeterminado
