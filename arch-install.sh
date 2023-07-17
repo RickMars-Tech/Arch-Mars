@@ -76,8 +76,8 @@ yay -S bashtop-git bat eww-wayland-git grimblast-git gtklock \
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
-sudo pacman -Syu --needed --noconfirm acpi alsa-lib alsa-plugins bashtop \
-    bluez brightnessctl dunst ffmpeg ffmpegthumbnailer firefox gamemode \
+sudo pacman -Syu --needed acpi alsa-lib alsa-plugins bashtop bluez \
+    brightnessctl dunst ffmpeg ffmpegthumbnailer firefox gamemode \
     gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs gimp \
     gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk \
     jq kitty kvantum lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls \
