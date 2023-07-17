@@ -2,6 +2,11 @@
 # Antes de usarlo, ten en cuenta que esta es la forma en la que yo configuro mi sistema.
 # Personalízalo a tu gusto para evitar errores.
 
+if [[ $EUID -eq 0 ]]; then
+   echo "Este script no debe ejecutarse con privilegios de administrador"
+   exit 1
+fi
+
 # Define variables
 GREEN="$(tput setaf 2)[OK]$(tput sgr0)"
 RED="$(tput setaf 1)[ERROR]$(tput sgr0)"
@@ -71,7 +76,7 @@ paru -S bashtop-git eww-wayland-git grimblast-git gtklock \
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
-sudo pacman -Syu --needed acpi alsa-lib alsa-plugins bashtop bluez \
+sudo pacman -Syu --needed acpi alsa-lib alsa-plugins bashtop bat bluez \
     brightnessctl dunst ffmpeg ffmpegthumbnailer firefox gamemode gedit \
     giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs gimp \
     gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk \
