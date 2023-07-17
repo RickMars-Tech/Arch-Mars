@@ -49,7 +49,7 @@ sleep 2
 
 # Actualizar el sistema antes de proceder
 printf "${YELLOW} Actualización del sistema para evitar problemas\n"
-sudo pacman -Syu --noconfirm && sudo powerpill -Su && paru -Sua 2>&1 | tee -a "$LOG"
+sudo pacman -Syu --noconfirm && paru -Sua 2>&1 | tee -a "$LOG"
 
 sleep 2
 
@@ -67,11 +67,11 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
 sudo paru -S bashtop-git eww-wayland-git grimblast-git gtklock \
     heroic-games-launcher-bin hyprpicker-git nwg-look-bin otf-sora pamac-aur \
     playerctl-git rofi-lbonn-wayland-git sddm-git timeshift ttf-comfortaa \
-    ttf-icomoon-feather viewnior-git wlogout
+    ttf-icomoon-feather viewnior-git wlogout powerpill
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
-sudo pacman -S --noconfirm acpi alsa-lib alsa-plugins bashtop bluez \
+sudo pacman -Syu --needed acpi alsa-lib alsa-plugins bashtop bluez \
     brightnessctl dunst ffmpeg ffmpegthumbnailer firefox gamemode gedit \
     giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs gimp \
     gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk \
