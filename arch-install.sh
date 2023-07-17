@@ -46,7 +46,7 @@ else
   else
     echo "Neither Paru nor Yay is present in your system."
     echo "Installing Paru..."
-    git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si && cd ..
+    git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si --noconfirm && cd ..
   fi
 fi
 
