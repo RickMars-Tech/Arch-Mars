@@ -23,7 +23,7 @@ else
 fi
 
 echo "Actualizando paquetes y firmware"
-sudo pacman -Syyuu --noconfirm
+sudo pacman -Syyuu --noconfirm --needed base-devel
 fwupdmgr get-devices
 fwupdmgr refresh
 fwupdmgr get-updates
