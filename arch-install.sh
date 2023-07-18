@@ -62,7 +62,7 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
 
 # Instalaciobes de yay
 yay -S bashtop-git eww-wayland gtklock heroic-games-launcher-bin hyprpicker-git \
-    pamac-aur playerctl-git rofi-lbonn-wayland-git timeshift-bin
+    pamac-aur playerctl-git timeshift-bin
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
