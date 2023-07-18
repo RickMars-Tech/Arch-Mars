@@ -88,9 +88,11 @@ fc-cache -vf
 
 # Moviendo "cosas"
 printf " Copiando archivos de configuracion...\n"
+mkdir ~/.config/
 cp -r dotconfig/config/* ~/.config/
 
 printf " Copiando archivos extra...\n"
+mkdir -p ~/.local/share/
 sudo cp -r applications/ ~/.local/share/
 sudo cp -r wal/ ~/wal/
 
@@ -186,7 +188,7 @@ sleep 2
 # Instalando tema de Sddm
 printf " Instalando tema de Sddm...\n"
 sudo cp -r sddm/Elegant/ /usr/share/sddm/themes/
-sudo mkdir /etc/sddm.config
+sudo cat >> /etc/sddm.config
 sudo sed -i "s/^Current=.*/Current=Elegant/g" /etc/sddm.conf
 echo "El tema ha sido instalado correctamente."
 
