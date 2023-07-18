@@ -61,9 +61,8 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
     com.discordapp.Discord com.github.tchx84.Flatseal 
 
 # Instalaciobes de yay
-yay -S bashtop-git eww-wayland grimblast-git gtklock \
-    heroic-games-launcher-bin hyprpicker-git pamac-aur \
-    playerctl-git rofi-lbonn-wayland-git sddm-git timeshift-bin wlogout-git
+yay -S bashtop-git eww-wayland gtklock heroic-games-launcher-bin hyprpicker-git \
+    pamac-aur playerctl-git rofi-lbonn-wayland-git timeshift-bin
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
@@ -80,7 +79,7 @@ sudo pacman -Syu --noconfirm --needed acpi alsa-lib alsa-plugins bat bluez \
     lutris lxappearance mpv ncurses nautilus networkmanager neovim neofetch \
     nm-connection-editor noise-suppression-for-voice ocl-icd openal pamixer \
     papirus-icon-theme pavucontrol polkit-gnome qt5-wayland qt5ct qt6-wayland \
-    ranger rofi socat sqlite slurp steam thunderbird tumbler upower v4l-utils \
+    ranger rofi sddm socat sqlite slurp steam thunderbird tumbler upower v4l-utils \
     virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder wine-staging 
     winetricks wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland zsh
     
