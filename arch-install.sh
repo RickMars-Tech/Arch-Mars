@@ -29,14 +29,6 @@ fwupdmgr refresh
 fwupdmgr get-updates
 fwupdmgr update
 
-# Agregar repo de Chaotic-Aur
-sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-sudo pacman-key --lsign-key 3056513887B78AEB
-sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-
-echo -e "[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf > /dev/null
-echo -e "Se ha configurado Chaotic-Aur"
-
 # Checar si paru está instalado
 if command -v paru >/dev/null; then
   echo "Paru $(paru -V | awk '{print $2}') is already installed in your system"
