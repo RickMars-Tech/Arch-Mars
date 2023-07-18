@@ -61,9 +61,9 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
     com.discordapp.Discord com.github.tchx84.Flatseal 
 
 # Instalaciobes de yay
-yay -S bashtop-git eww-wayland-git grimblast-git gtklock \
+yay -S bashtop-git eww-wayland grimblast-git gtklock \
     heroic-games-launcher-bin hyprpicker-git pamac-aur \
-    playerctl-git rofi-lbonn-wayland-git sddm-git timeshift-bin wlogout
+    playerctl-git rofi-lbonn-wayland-git sddm-git timeshift-bin wlogout-git
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
