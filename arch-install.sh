@@ -23,7 +23,7 @@ else
 fi
 
 echo "Actualizando paquetes y firmware"
-sudo pacman -Syyuu --noconfirm --needed base-devel
+sudo pacman -Syyuu --noconfirm --needed
 fwupdmgr get-devices
 fwupdmgr refresh
 fwupdmgr get-updates
@@ -38,7 +38,7 @@ else
   else
     echo "Neither Paru nor Yay is present in your system."
     echo "Installing Paru..."
-    git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ..
+    git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd ..
   fi
 fi
 
