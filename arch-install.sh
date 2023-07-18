@@ -23,7 +23,7 @@ else
 fi
 
 echo "Actualizando paquetes y firmware"
-sudo pacman -Syyuu --noconfirm --needed base-devel cargo
+sudo pacman -Syyuu --noconfirm --needed base-devel
 fwupdmgr get-devices
 fwupdmgr refresh
 fwupdmgr get-updates
@@ -38,7 +38,7 @@ else
   else
     echo "Neither Paru nor Yay is present in your system."
     echo "Installing Paru..."
-    git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si && cd ..
+    git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ..
   fi
 fi
 
@@ -46,7 +46,7 @@ sleep 2
 
 # Actualizar el sistema antes de proceder
 printf "${YELLOW} Actualización del sistema para evitar problemas\n"
-sudo pacman -Syu --noconfirm && paru 2>&1 | tee -a "$LOG"
+sudo pacman -Syu --noconfirm && yay 2>&1 | tee -a "$LOG"
 
 sleep 2
 
@@ -61,7 +61,7 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
     com.discordapp.Discord com.github.tchx84.Flatseal 
 
 # Instalaciobes de yay
-paru -S bashtop-git eww-wayland-git grimblast-git gtklock \
+yay -S bashtop-git eww-wayland-git grimblast-git gtklock \
     heroic-games-launcher-bin hyprpicker-git pamac-aur \
     playerctl-git rofi-lbonn-wayland-git sddm-git timeshift-bin wlogout
 
