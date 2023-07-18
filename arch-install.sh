@@ -80,7 +80,7 @@ sudo pacman -Syu --noconfirm --needed acpi alsa-lib alsa-plugins bat bluez \
     nm-connection-editor noise-suppression-for-voice ocl-icd openal pamixer \
     papirus-icon-theme pavucontrol polkit-gnome qt5-wayland qt5ct qt6-wayland \
     ranger rofi sddm socat sqlite slurp steam thunderbird tumbler upower v4l-utils \
-    virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder wine-staging 
+    virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder wine-staging \
     winetricks wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland zsh
     
 # Recargar Fuentes
