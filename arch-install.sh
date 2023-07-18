@@ -62,14 +62,14 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
 
 # Instalaciobes de yay
 paru -S bashtop-git eww-wayland-git grimblast-git gtklock \
-    heroic-games-launcher-bin hyprpicker-git nwg-look-bin otf-sora pamac-aur \
-    playerctl-git rofi-lbonn-wayland-git sddm-git timeshift wlogout
+    heroic-games-launcher-bin hyprpicker-git pamac-aur \
+    playerctl-git rofi-lbonn-wayland-git sddm-git timeshift-bin wlogout
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
 sudo pacman -Syu --noconfirm --needed acpi alsa-lib alsa-plugins bat bluez \
     brightnessctl dunst ffmpeg ffmpegthumbnailer firefox gamemode gamescope \
-    gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs gimp \
+    gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs gimp grim \
     gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk \
     jq kitty kvantum lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls \
     qt5ct lib32-gamemode lib32-gst-plugins-base-libs lib32-libjpeg-turbo \
@@ -80,7 +80,7 @@ sudo pacman -Syu --noconfirm --needed acpi alsa-lib alsa-plugins bat bluez \
     lutris lxappearance mpv ncurses nautilus networkmanager neovim neofetch \
     nm-connection-editor noise-suppression-for-voice ocl-icd openal pamixer \
     papirus-icon-theme pavucontrol polkit-gnome qt5-wayland qt5ct qt6-wayland \
-    ranger rofi socat sqlite steam thunderbird tumbler upower v4l-utils \
+    ranger rofi socat sqlite slurp steam thunderbird tumbler upower v4l-utils \
     virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder wine-staging 
     winetricks wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland zsh
     
