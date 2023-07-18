@@ -112,6 +112,9 @@ chmod +x ~/.config/hypr/gamemode.sh
 # Scripts de eww
 chmod +x ~/.config/eww/scripts/init
 
+#~~ Gamescope 
+sudo setcap 'CAP_SYS_NICE=eip' $(which gamescope)
+
 #~~ ZRAM-GENERATOR
 
 # 0/Verificar módulo de zram
