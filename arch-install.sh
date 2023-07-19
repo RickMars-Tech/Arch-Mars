@@ -169,6 +169,10 @@ fi
 echo -e "vm.max_map_count=1048576
 vm.swappiness=5" | sudo tee -a /etc/sysctl.d/90-override.conf > /dev/null
 
+#~~ Gamescope
+echo -e "Estableciendo prioridad de Gamescope..."
+setcap 'CAP_SYS_NICE=eip' "$(command -v gamescope)"
+
 #~~ KERNEL
 
 # Definir las variables que quieres establecer en el Kernel
