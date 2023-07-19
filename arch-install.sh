@@ -58,7 +58,7 @@ sleep 2
 # Instalaciones por Flatpak
 echo "Instalando Aplicaciones por Flatpak"
 sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
-    com.discordapp.Discord com.github.tchx84.Flatseal 
+    com.discordapp.Discord com.github.tchx84.Flatseal 2>&1 | tee -a "$LOG"
 
 # Instalacion de herramientas
 echo "Instalando Herramientas por Pacman"
@@ -80,7 +80,7 @@ paru -S bashtop-git eww-wayland gtklock heroic-games-launcher hyprpicker-git \
     papirus-icon-theme pavucontrol polkit-gnome qt5-wayland qt5ct qt6-wayland \
     ranger rofi socat sqlite slurp steam thunderbird tumbler upower v4l-utils \
     virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder wine-staging \
-    winetricks wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland zsh
+    winetricks wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland zsh 2>&1 | tee -a "$LOG"
     
 # Recargar Fuentes
 fc-cache -vf
@@ -89,11 +89,11 @@ sleep 3
 
 # Moviendo "cosas"
 printf " Copiando archivos de configuracion...\n"
-cp -r dotconfig/config/* ~/.config/
+cp -r dotconfig/config/* ~/.config/ 2>&1 | tee -a "$LOG"
 
 printf " Copiando archivos extra...\n"
-cp -r applications/ ~/.local/share/
-cp -r wal/ ~/wal/
+cp -r applications/ ~/.local/share/ 2>&1 | tee -a "$LOG"
+cp -r wal/ ~/wal/ 2>&1 | tee -a "$LOG"
 
 printf " Dando permisos a archivos...\n"
 chmod +x ~/.config/hypr/xdg-portal-hyprland
