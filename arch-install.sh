@@ -38,7 +38,7 @@ else
   else
     echo "Neither Paru nor Yay is present in your system."
     echo "Installing Paru..."
-    git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si && cd ..
+    git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si && cd ..
   fi
 fi
 
@@ -63,7 +63,7 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
 # Instalaciobes de yay
 paru -S bashtop-git eww-wayland gtklock heroic-games-launcher-bin hyprpicker-git \
     pamac-aur powerpill playerctl-git sddm-git timeshift-bin ttf-ms-win11-auto \
-    nerd-fonts-sf-mono otf-nerd-fonts-monacob-mono -y  
+    nerd-fonts-sf-mono otf-nerd-fonts-monacob-mono
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
