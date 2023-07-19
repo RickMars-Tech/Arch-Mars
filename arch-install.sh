@@ -63,15 +63,15 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
 # Instalaciobes de yay
 paru -S bashtop-git eww-wayland gtklock heroic-games-launcher-bin hyprpicker-git \
     pamac-aur powerpill playerctl-git sddm-git timeshift-bin ttf-ms-win11-auto \
-    adobe-source-han-sans-jp-fonts adobe-source-han-sans-kr-fonts ttf-jetbrains-mono-nerd \
-    ttf-jetbrains-mono otf-font-awesome nerd-fonts-sf-mono otf-nerd-fonts-monacob-mono -y  
+    nerd-fonts-sf-mono otf-nerd-fonts-monacob-mono -y  
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
-sudo pacman -Syu --noconfirm --needed acpi alsa-lib alsa-plugins bat bluez \
-    brightnessctl dunst ffmpeg ffmpegthumbnailer firefox gamemode gamescope \
-    gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs gimp grim \
-    gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk \
+sudo pacman -Syu --noconfirm --needed acpi adobe-source-han-sans-jp-fonts alsa-lib \
+    adobe-source-han-sans-kr-fonts ttf-jetbrains-mono-nerd ttf-jetbrains-mono \ 
+    alsa-plugins bat bluez brightnessctl dunst ffmpeg ffmpegthumbnailer firefox \
+    gamemode gamescope gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs \
+    gimp grim gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk \
     jq kitty kvantum lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls \
     qt5ct lib32-gamemode lib32-gst-plugins-base-libs lib32-libjpeg-turbo \
     lib32-libldap lib32-libpng lib32-libxcomposite lib32-libxinerama lib32-mesa \
@@ -79,7 +79,7 @@ sudo pacman -Syu --noconfirm --needed acpi alsa-lib alsa-plugins bat bluez \
     lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo \
     libldap libpng libpulse libxcomposite libxinerama libxslt libva \
     lutris lxappearance mpv ncurses nautilus networkmanager neovim neofetch \
-    nm-connection-editor noise-suppression-for-voice ocl-icd openal pamixer \
+    nm-connection-editor noise-suppression-for-voice ocl-icd openal otf-font-awesome pamixer \
     papirus-icon-theme pavucontrol polkit-gnome qt5-wayland qt5ct qt6-wayland \
     ranger rofi socat sqlite slurp steam thunderbird tumbler upower v4l-utils \
     virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder wine-staging \
