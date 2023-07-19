@@ -62,7 +62,7 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
 
 # Instalaciobes de yay
 yay -S bashtop-git eww-wayland gtklock heroic-games-launcher-bin hyprpicker-git \
-    pamac-aur powerpill playerctl-git timeshift-bin
+    pamac-aur powerpill playerctl-git sddm-git timeshift-bin
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
@@ -79,7 +79,7 @@ sudo pacman -Syu --noconfirm --needed acpi alsa-lib alsa-plugins bat bluez \
     lutris lxappearance mpv ncurses nautilus networkmanager neovim neofetch \
     nm-connection-editor noise-suppression-for-voice ocl-icd openal pamixer \
     papirus-icon-theme pavucontrol polkit-gnome qt5-wayland qt5ct qt6-wayland \
-    ranger rofi sddm socat sqlite slurp steam thunderbird tumbler upower v4l-utils \
+    ranger rofi socat sqlite slurp steam thunderbird tumbler upower v4l-utils \
     virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder wine-staging \
     winetricks wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland zsh
     
@@ -88,11 +88,9 @@ fc-cache -vf
 
 # Moviendo "cosas"
 printf " Copiando archivos de configuracion...\n"
-mkdir ~/.config/
 cp -r dotconfig/config/* ~/.config/
 
 printf " Copiando archivos extra...\n"
-mkdir -p ~/.local/share/
 sudo cp -r applications/ ~/.local/share/
 sudo cp -r wal/ ~/wal/
 
@@ -101,7 +99,23 @@ chmod +x ~/.config/hypr/xdg-portal-hyprland
 chmod +x ~/.config/hypr/minimize-steam
 chmod +x ~/.config/hypr/gamemode.sh
 # Scripts de eww
+chmod +x ~/.config/eww/scripts/apps
+chmod +x ~/.config/eww/scripts/bluetooth
+chmod +x ~/.config/eww/scripts/brightness
+chmod +x ~/.config/eww/scripts/events
+chmod +x ~/.config/eww/scripts/hyprland
 chmod +x ~/.config/eww/scripts/init
+chmod +x ~/.config/eww/scripts/launcher
+chmod +x ~/.config/eww/scripts/network
+chmod +x ~/.config/eww/scripts/night_light
+chmod +x ~/.config/eww/scripts/notifications
+chmod +x ~/.config/eww/scripts/osd
+chmod +x ~/.config/eww/scripts/player
+chmod +x ~/.config/eww/scripts/power
+chmod +x ~/.config/eww/scripts/theme
+chmod +x ~/.config/eww/scripts/volume
+chmod +x ~/.config/eww/scripts/weather
+chmod +x ~/.config/eww/scripts/myshell/myshell
 
 #~~ Gamescope 
 sudo setcap 'CAP_SYS_NICE=eip' $(which gamescope)
@@ -182,15 +196,6 @@ if [ -f "$grub_config" ]; then
 else
   echo "El archivo de configuración de GRUB no se encontró."
 fi
-
-sleep 2
-
-# Instalando tema de Sddm
-printf " Instalando tema de Sddm...\n"
-sudo cp -r sddm/Elegant/ /usr/share/sddm/themes/
-sudo cat >> /etc/sddm.config
-sudo sed -i "s/^Current=.*/Current=Elegant/g" /etc/sddm.conf
-echo "El tema ha sido instalado correctamente."
 
 sleep 3
 
