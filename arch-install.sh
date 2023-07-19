@@ -42,7 +42,7 @@ else
   fi
 fi
 
-sleep 2
+sleep 3
 
 # Actualizar el sistema antes de proceder
 printf "${YELLOW} Actualización del sistema para evitar problemas\n"
@@ -87,6 +87,8 @@ sudo pacman -Syu --noconfirm --needed acpi adobe-source-han-sans-jp-fonts alsa-l
     
 # Recargar Fuentes
 fc-cache -vf
+
+sleep 3
 
 # Moviendo "cosas"
 printf " Copiando archivos de configuracion...\n"
