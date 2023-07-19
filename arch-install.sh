@@ -93,8 +93,8 @@ printf " Copiando archivos de configuracion...\n"
 cp -r dotconfig/config/* ~/.config/
 
 printf " Copiando archivos extra...\n"
-sudo cp -r applications/ ~/.local/share/
-sudo cp -r wal/ ~/wal/
+cp -r applications/ ~/.local/share/
+cp -r wal/ ~/wal/
 
 printf " Dando permisos a archivos...\n"
 chmod +x ~/.config/hypr/xdg-portal-hyprland
