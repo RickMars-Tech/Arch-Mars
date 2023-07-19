@@ -68,7 +68,7 @@ paru -S bashtop-git eww-wayland gtklock heroic-games-launcher-bin hyprpicker-git
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
 sudo pacman -Syu --noconfirm --needed acpi adobe-source-han-sans-jp-fonts alsa-lib \
-    adobe-source-han-sans-kr-fonts ttf-jetbrains-mono-nerd ttf-jetbrains-mono \ 
+    adobe-source-han-sans-kr-fonts ttf-jetbrains-mono-nerd ttf-jetbrains-mono \
     alsa-plugins bat bluez brightnessctl dunst ffmpeg ffmpegthumbnailer firefox \
     gamemode gamescope gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs \
     gimp grim gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk \
