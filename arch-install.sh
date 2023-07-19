@@ -172,7 +172,7 @@ vm.swappiness=5" | sudo tee -a /etc/sysctl.d/90-override.conf > /dev/null
 #~~ KERNEL
 
 # Definir las variables que quieres establecer en el Kernel
-options="quiet splash loglevel=3 mitigations=auto,nosmt amd_iommu=on transparent_hugepage=always"
+options="quiet splash loglevel=3 mitigations=auto,nosmt transparent_hugepage=always"
 
 # Ruta del archivo de configuración de GRUB
 grub_config="/etc/default/grub"
