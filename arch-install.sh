@@ -65,8 +65,8 @@ echo "Instalando Herramientas por Pacman"
 paru -S bashtop-git eww-wayland gtklock heroic-games-launcher hyprpicker-git \
     pamac-aur powerpill playerctl-git sddm-git stacer-bin timeshift-bin ttf-ms-win11-auto \
     nerd-fonts-sf-mono otf-nerd-fonts-monacob-mono gotop-bin acpi adobe-source-han-sans-jp-fonts \
-    alsa-lib adobe-source-han-sans-kr-fonts ttf-jetbrains-mono-nerd ttf-jetbrains-mono \
-    alsa-plugins bat bluez brightnessctl dunst ffmpeg ffmpegthumbnailer firefox \
+    asusctl alsa-lib adobe-source-han-sans-kr-fonts ttf-jetbrains-mono-nerd ttf-jetbrains-mono \
+    alsa-plugins bat bluez brightnessctl cups dunst ffmpeg ffmpegthumbnailer firefox \
     gamemode gamescope gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs \
     gimp grim gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk \
     jq kitty kvantum lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls \
