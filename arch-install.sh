@@ -62,7 +62,9 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
 
 # Instalaciobes de yay
 yay -S bashtop-git eww-wayland gtklock heroic-games-launcher-bin hyprpicker-git \
-    pamac-aur powerpill playerctl-git sddm-git timeshift-bin
+    pamac-aur powerpill playerctl-git sddm-git timeshift-bin ttf-ms-win11-auto \
+    adobe-source-han-sans-jp-fonts adobe-source-han-sans-kr-fonts ttf-jetbrains-mono-nerd \
+    ttf-jetbrains-mono otf-font-awesome nerd-fonts-sf-mono otf-nerd-fonts-monacob-mono -y  
 
 # Instalaciones por Pacman
 echo "Instalando Herramientas por Pacman"
