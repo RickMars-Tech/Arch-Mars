@@ -119,9 +119,6 @@ chmod +x ~/.config/eww/scripts/volume
 chmod +x ~/.config/eww/scripts/weather
 chmod +x ~/.config/eww/scripts/myshell/myshell
 
-#~~ Gamescope 
-sudo setcap 'CAP_SYS_NICE=eip' $(which gamescope)
-
 #~~ ZRAM-GENERATOR
 
 # 0/Verificar módulo de zram
