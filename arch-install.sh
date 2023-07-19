@@ -62,7 +62,7 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
 
 # Instalaciobes de yay
 paru -S bashtop-git eww-wayland gtklock heroic-games-launcher-bin hyprpicker-git \
-    pamac-aur powerpill playerctl-git sddm-git timeshift-bin ttf-ms-win11-auto \
+    pamac-aur powerpill playerctl-git sddm-git stacer-bin timeshift-bin ttf-ms-win11-auto \
     nerd-fonts-sf-mono otf-nerd-fonts-monacob-mono
 
 # Instalaciones por Pacman
