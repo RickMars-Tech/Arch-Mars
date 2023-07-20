@@ -96,9 +96,9 @@ cp -r applications/ ~/.local/share/ 2>&1 | tee -a "$LOG"
 cp -r wal/ ~/wal/ 2>&1 | tee -a "$LOG"
 
 printf " Dando permisos a archivos...\n"
-chmod +x ~/.config/hypr/xdg-portal-hyprland
-chmod +x ~/.config/hypr/minimize-steam
-chmod +x ~/.config/hypr/gamemode.sh
+chmod +x ~/.config/hypr/scripts/xdg-portal-hyprland
+chmod +x ~/.config/hypr/scripts/minimize-steam
+chmod +x ~/.config/hypr/scripts/gamemode.sh
 # Scripts de eww
 chmod +x ~/.config/eww/scripts/apps
 chmod +x ~/.config/eww/scripts/bluetooth
