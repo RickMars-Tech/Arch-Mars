@@ -61,7 +61,7 @@ sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
     com.discordapp.Discord com.github.tchx84.Flatseal com.usebottles.bottles 2>&1 | tee -a "$LOG"
 
 # Instalacion de herramientas
-echo "Instalando Herramientas por Pacman"
+echo "Instalando Herramientas y Aplicaciones"
 paru -S bashtop-git eww-wayland gtklock heroic-games-launcher hyprpicker-git \
     pamac-aur powerpill playerctl-git sddm-git stacer-bin timeshift-bin ttf-ms-win11-auto \
     nerd-fonts-sf-mono otf-nerd-fonts-monacob-mono gotop-bin acpi adobe-source-han-sans-jp-fonts \
