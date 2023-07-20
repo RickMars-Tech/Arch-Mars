@@ -58,7 +58,7 @@ sleep 2
 # Instalaciones por Flatpak
 echo "Instalando Aplicaciones por Flatpak"
 sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
-    com.discordapp.Discord com.github.tchx84.Flatseal 2>&1 | tee -a "$LOG"
+    com.discordapp.Discord com.github.tchx84.Flatseal com.usebottles.bottles 2>&1 | tee -a "$LOG"
 
 # Instalacion de herramientas
 echo "Instalando Herramientas por Pacman"
@@ -67,7 +67,7 @@ paru -S bashtop-git eww-wayland gtklock heroic-games-launcher hyprpicker-git \
     nerd-fonts-sf-mono otf-nerd-fonts-monacob-mono gotop-bin acpi adobe-source-han-sans-jp-fonts \
     asusctl alsa-lib adobe-source-han-sans-kr-fonts ttf-jetbrains-mono-nerd ttf-jetbrains-mono \
     alsa-plugins bat bluez brightnessctl cups dunst ffmpeg ffmpegthumbnailer firefox \
-    gamemode gamescope gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs \
+    gamemode gamescope-plus gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs \
     gimp grim gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk \
     jq kitty kvantum lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls \
     qt5ct lib32-gamemode lib32-gst-plugins-base-libs lib32-libjpeg-turbo \
