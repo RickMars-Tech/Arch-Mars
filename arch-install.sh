@@ -57,8 +57,9 @@ sleep 2
 
 # Instalaciones por Flatpak
 echo "Instalando Aplicaciones por Flatpak"
-sudo flatpak install -y net.davidotek.pupgui2 com.wps.Office org.mamedev.MAME \
-    com.discordapp.Discord com.github.tchx84.Flatseal com.usebottles.bottles 2>&1 | tee -a "$LOG"
+sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME \
+    com.discordapp.Discord com.github.tchx84.Flatseal com.usebottles.bottles \
+    org.onlyoffice.desktopeditors 2>&1 | tee -a "$LOG"
 
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
