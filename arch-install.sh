@@ -175,10 +175,10 @@ setcap 'CAP_SYS_NICE=eip' "$(command -v gamescope)"
 
 # Copia el tema de SDDM
     echo -e "$CNT - Setting up the login screen."
-    sudo cp -R Extras/sdt /usr/share/sddm/themes/
+    sudo cp -R sddm/Elegant /usr/share/sddm/themes/
     sudo chown -R $USER:$USER /usr/share/sddm/themes/sdt
     sudo mkdir /etc/sddm.conf.d
-    echo -e "[Theme]\nCurrent=sdt" | sudo tee -a /etc/sddm.conf.d/10-theme.conf &>> "$LOG"
+    echo -e "[Theme]\nCurrent=Elegant" | sudo tee -a /etc/sddm.conf.d/10-theme.conf &>> "$LOG"
     WLDIR=/usr/share/wayland-sessions
     if [ -d "$WLDIR" ]; then
         echo -e "$COK - $WLDIR found"
