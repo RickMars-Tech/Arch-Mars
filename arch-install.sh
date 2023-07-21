@@ -78,7 +78,7 @@ paru -S bashtop-git eww-wayland gtklock heroic-games-launcher hyprpicker-git \
     lutris lxappearance mpv ncurses nautilus networkmanager neovim neofetch \
     nm-connection-editor noise-suppression-for-voice ocl-icd openal otf-font-awesome pamixer \
     papirus-icon-theme pavucontrol polkit-gnome qt5-wayland qt5ct qt6-wayland \
-    ranger rofi socat sqlite slurp steam thunderbird tumbler upower v4l-utils \
+    ranger rofi socat sqlite slurp steam swappy thunderbird tumbler upower v4l-utils \
     virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder wine-staging \
     winetricks wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland zsh 2>&1 | tee -a "$LOG"
     
