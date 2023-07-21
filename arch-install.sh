@@ -64,7 +64,7 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME \
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
 paru -S bashtop-git eww-wayland gtklock heroic-games-launcher hyprpicker-git \
-    pamac-aur powerpill playerctl-git sddm-git stacer-bin timeshift-bin ttf-ms-win11-auto \
+    pamac-aur powerpill playerctl-git sddm-git stacer-bin timeshift-bin otf-font-awesome \
     nerd-fonts-sf-mono otf-nerd-fonts-monacob-mono gotop-bin acpi adobe-source-han-sans-jp-fonts \
     asusctl alsa-lib adobe-source-han-sans-kr-fonts ttf-jetbrains-mono-nerd ttf-jetbrains-mono \
     alsa-plugins bat bluez brightnessctl cups dunst ffmpeg ffmpegthumbnailer firefox \
@@ -77,7 +77,7 @@ paru -S bashtop-git eww-wayland gtklock heroic-games-launcher hyprpicker-git \
     lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo \
     libldap libpng libpulse libxcomposite libxinerama libxslt libva \
     lutris lxappearance mpv ncurses nautilus networkmanager neovim neofetch \
-    nm-connection-editor noise-suppression-for-voice ocl-icd openal otf-font-awesome pamixer \
+    nm-connection-editor noise-suppression-for-voice ocl-icd openal pamixer \
     papirus-icon-theme pavucontrol polkit-gnome qt5-wayland qt5ct qt6-wayland \
     ranger rofi socat sqlite slurp steam swappy thunderbird tumbler upower v4l-utils \
     virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder wine-staging \
