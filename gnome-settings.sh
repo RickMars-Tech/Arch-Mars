@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-
+# Utiliza este script solo si usaras Gnome.
 if [[ $EUID -eq 0 ]]; then
    echo "Este script no debe ejecutarse con privilegios de administrador"
    exit 1
