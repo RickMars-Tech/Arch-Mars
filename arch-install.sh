@@ -1,12 +1,10 @@
 #!/bin/bash
 # Antes de usarlo, ten en cuenta que esta es la forma en la que yo configuro mi sistema.
 # Personalízalo a tu gusto para evitar errores.
-
 if [[ $EUID -eq 0 ]]; then
    echo "Este script no debe ejecutarse con privilegios de administrador"
    exit 1
 fi
-
 # Define variables
 GREEN="$(tput setaf 2)[OK]$(tput sgr0)"
 RED="$(tput setaf 1)[ERROR]$(tput sgr0)"
@@ -126,7 +124,6 @@ chmod +x ~/.config/eww/scripts/weather
 chmod +x ~/.config/eww/scripts/myshell/myshell
 
 #~~ ZRAM-GENERATOR
-
 # 0/Verificar módulo de zram
 if sudo grep -q "^[zram0]$" /etc/systemd/zram-generator.conf; then
     echo "[zram0] ya está configurado en zstd"
@@ -135,7 +132,6 @@ else
     echo "[zram0]" | sudo tee -a /etc/systemd/zram-generator.conf > /dev/null
     echo -e "El módulo [zram0] se ha establecido"
 fi
-
 # 1/Verificar tamaño de zram
 if sudo grep -q "^zram-size = ram / 2$" /etc/systemd/zram-generator.conf; then
     echo "compression-algorithm ya está configurado en zstd"
@@ -144,7 +140,6 @@ else
     echo "zram-size = ram / 2" | sudo tee -a /etc/systemd/zram-generator.conf > /dev/null
     echo -e "El tamaño se ha configurado"
 fi
-
 # 2/Verificar algoritmo de compresión de zram
 if sudo grep -q "^compression-algorithm = zstd$" /etc/systemd/zram-generator.conf; then
     echo "compression-algorithm ya está configurado en zstd"
@@ -153,7 +148,6 @@ else
     echo "compression-algorithm = zstd" | sudo tee -a /etc/systemd/zram-generator.conf > /dev/null
     echo -e "compression-algorithm se ha configurado en zstd"
 fi
-
 # 3/Verificar la prioridad de zram
 if sudo grep -q "^swap-priority = 100$" /etc/systemd/zram-generator.conf; then
     echo "swap-priority ya está configurado"
@@ -162,7 +156,6 @@ else
     echo "swap-priority = 100" | sudo tee -a /etc/systemd/zram-generator.conf > /dev/null
     echo -e "swap-priority se ha configurado en zstd"
 fi
-
 # 4/Verificar fs-type
 if sudo grep -q "^fs-type = swap$" /etc/systemd/zram-generator.conf; then
     echo "fs-type ya está configurado en zstd"
@@ -171,7 +164,6 @@ else
     echo "fs-type = swap" | sudo tee -a /etc/systemd/zram-generator.conf > /dev/null
     echo -e "fs-type se ha configurado en zstd"
 fi
-
 # Optimizaciones de VM (Memoria Virtual)
 echo -e "vm.max_map_count=1048576
 vm.swappiness=5" | sudo tee -a /etc/sysctl.d/90-override.conf > /dev/null
@@ -211,13 +203,10 @@ echo -e "Estableciendo prioridad de Gamescope..."
 setcap 'CAP_SYS_NICE=eip' "$(command -v gamescope)"
 
 #~~ KERNEL
-
 # Definir las variables que quieres establecer en el Kernel
 options="quiet splash loglevel=3 mitigations=auto,nosmt transparent_hugepage=always"
-
 # Ruta del archivo de configuración de GRUB
 grub_config="/etc/default/grub"
-
 # Verificar si el archivo de configuración existe
 if [ -f "$grub_config" ]; then
   # Comprobar si la variable ya está configurada
@@ -228,7 +217,6 @@ if [ -f "$grub_config" ]; then
     # Agregar la configuración al final del archivo
     echo "GRUB_CMDLINE_LINUX_DEFAULT=\"$options\"" | sudo tee -a "$grub_config" > /dev/null
   fi
-
   # Actualizar el archivo de configuración de GRUB
   sudo grub-mkconfig -o /boot/grub/grub.cfg
   echo "La configuración de GRUB ha sido actualizada."
