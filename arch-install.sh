@@ -64,7 +64,7 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME \
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
 paru -S bashtop-git eww-wayland gtklock heroic-games-launcher hyprpicker-git \
-    pamac-aur powerpill playerctl-git sddm-git stacer-bin timeshift-bin otf-font-awesome \
+    pamac-aur powerpill playerctl-git sddm stacer-bin timeshift-bin otf-font-awesome \
     nerd-fonts-sf-mono otf-nerd-fonts-monacob-mono gotop-bin acpi adobe-source-han-sans-jp-fonts \
     asusctl alsa-lib adobe-source-han-sans-kr-fonts ttf-jetbrains-mono-nerd ttf-jetbrains-mono \
     alsa-plugins bat bluez brightnessctl cups dunst ffmpeg ffmpegthumbnailer firefox \
@@ -185,9 +185,15 @@ fi
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # Verificar si la instalación de Oh My Zsh se completó correctamente
 if [ $? -eq 0 ]; then
-  # Copiar directorio de Oh My Zsh
+  # Clonando los plugins de oh-my-zsh
+    # Plugin Autosuggestions
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    # Plugin Fast-Syntax-Highlight
+  git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
+  ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+    # Copiar directorio de Oh My Zsh
   cp -r dotconfig/oh-my-zsh/eye.zsh-theme ~/.oh-my-zsh/themes/
-  # Copiar archivo de configuración Zsh
+    # Copiar archivo de configuración Zsh
   cp -r dotconfig/.zshrc ~/
 else
   echo "La instalación de Oh My Zsh falló. No se clonarán las configuraciones."
@@ -198,20 +204,6 @@ sleep 4
 #~~ Gamescope
 echo -e "Estableciendo prioridad de Gamescope..."
 setcap 'CAP_SYS_NICE=eip' "$(command -v gamescope)"
-
-# Copia el tema de SDDM
-    echo -e "$CNT - Setting up the login screen."
-    sudo cp -R sddm/Elegant /usr/share/sddm/themes/
-    sudo chown -R $USER:$USER /usr/share/sddm/themes/sdt
-    sudo mkdir /etc/sddm.conf.d
-    echo -e "[Theme]\nCurrent=Elegant" | sudo tee -a /etc/sddm.conf.d/10-theme.conf &>> "$LOG"
-    WLDIR=/usr/share/wayland-sessions
-    if [ -d "$WLDIR" ]; then
-        echo -e "$COK - $WLDIR found"
-    else
-        echo -e "$CWR - $WLDIR NOT found, creating..."
-        sudo mkdir $WLDIR
-    fi 
 
 #~~ KERNEL
 
