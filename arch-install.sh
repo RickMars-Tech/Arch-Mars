@@ -80,7 +80,8 @@ paru -S bashtop-git eww-wayland gtklock heroic-games-launcher hyprpicker-git \
     papirus-icon-theme pavucontrol polkit-gnome qt5-wayland qt5ct qt6-wayland \
     ranger rofi socat sqlite slurp steam swappy thunderbird tumbler upower v4l-utils \
     virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder wine-staging \
-    winetricks wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland zsh 2>&1 | tee -a "$LOG"
+    winetricks wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland zsh zsh-autosuggestions-git \
+    zsh-fast-syntax-highlighting-git 2>&1 | tee -a "$LOG"
     
 # Recargar Fuentes
 fc-cache -vf
@@ -168,6 +169,30 @@ fi
 # Optimizaciones de VM (Memoria Virtual)
 echo -e "vm.max_map_count=1048576
 vm.swappiness=5" | sudo tee -a /etc/sysctl.d/90-override.conf > /dev/null
+
+sleep 4
+
+# Verificar si Zsh ya está configurado como el intérprete predeterminado
+if [[ $(basename "$SHELL") != "zsh" ]]; then
+  # Establecer Zsh como el intérprete predeterminado
+  chsh -s "$(which zsh)"
+  echo "Zsh se ha configurado como el intérprete de comandos predeterminado."
+else
+  echo "Zsh ya está configurado como el intérprete de comandos predeterminado."
+fi
+# Instalar Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Verificar si la instalación de Oh My Zsh se completó correctamente
+if [ $? -eq 0 ]; then
+  # Copiar directorio de Oh My Zsh
+  cp -r dotconfig/oh-my-zsh/eye.zsh-theme ~/.oh-my-zsh/themes/
+  # Copiar archivo de configuración Zsh
+  cp -r dotconfig/.zshrc ~/
+else
+  echo "La instalación de Oh My Zsh falló. No se clonarán las configuraciones."
+fi
+
+sleep 4
 
 #~~ Gamescope
 echo -e "Estableciendo prioridad de Gamescope..."
