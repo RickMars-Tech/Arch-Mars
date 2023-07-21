@@ -73,7 +73,7 @@ paru -S archlinux-tweak-tool-git bashtop-git eww-wayland gtklock heroic-games-la
     lib32-libpng lib32-libxcomposite lib32-libxinerama lib32-mesa lib32-mpg123 lib32-ncurses \
     lib32-openal lib32-ocl-icd lib32-sqlite lib32-v4l-utils lib32-vulkan-icd-loader lib32-vulkan-radeon \
     libgpg-error libjpeg-turbo libldap libpng libpulse libxcomposite libxinerama libxslt libva \
-    lutris lxappearance mpv ncurses nautilus networkmanager neovim neofetch \
+    lutris lxappearance mpv ncurses nautilus networkmanager neovim neofetch android-udev \
     nm-connection-editor noise-suppression-for-voice ocl-icd openal pamixer \
     papirus-icon-theme pavucontrol polkit-gnome qt5-wayland qt5ct qt6-wayland \
     ranger rofi socat sqlite slurp steam swappy thunderbird tumbler upower v4l-utils \
