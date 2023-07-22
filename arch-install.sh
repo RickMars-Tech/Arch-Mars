@@ -67,7 +67,7 @@ paru -S archlinux-tweak-tool-git bashtop-git eww-wayland gtklock heroic-games-la
     asusctl alsa-lib adobe-source-han-sans-kr-fonts ttf-jetbrains-mono-nerd ttf-jetbrains-mono \
     stacer-bin timeshift-bin alsa-plugins bat bluez brightnessctl cups dunst ffmpeg ffmpegthumbnailer \
     gamemode gamescope-plus gedit giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs firefox \
-    grim gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jdk-openjdk jq kitty kvantum \
+    grim gst-plugins-base-libs gtk3 hyprland hyprpaper imv inotify-tools jre17-openjdk jq kitty kvantum \
     lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls qt5ct lib32-gamemode lib32-gst-plugins-base-libs \
     lib32-libjpeg-turbo adobe-source-han-sans-jp-fonts lib32-libldap lib32-libpng lib32-libxcomposite lib32-libxinerama \
     lib32-mesa lib32-mpg123 lib32-ncurses lib32-openal lib32-ocl-icd lib32-sqlite lib32-v4l-utils lib32-vulkan-icd-loader \
