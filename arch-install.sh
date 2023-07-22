@@ -75,8 +75,8 @@ paru -S archlinux-tweak-tool-git bashtop-git eww-wayland gtklock heroic-games-la
     lutris lxappearance mpv ncurses nautilus networkmanager neovim neofetch android-udev nm-connection-editor \
     noise-suppression-for-voice ocl-icd openal pamixer papirus-icon-theme pavucontrol polkit-gnome qt5-wayland qt5ct \
     qt6-wayland ranger rofi socat sqlite slurp steam swappy thunderbird tumbler upower v4l-utils \
-    virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder wine-staging \
-    winetricks wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland zsh zsh-autosuggestions-git \
+    virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder wine-staging winetricks \
+    wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland xfsprogs zsh zsh-autosuggestions-git \
     zsh-fast-syntax-highlighting-git 2>&1 | tee -a "$LOG"
     
 # Recargar Fuentes
