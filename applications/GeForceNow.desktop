@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=GeForce Now
-Comment=Cliente en la nube de Nvidia
-Icon=/mnt/sdb1/AppImages/Icons/geforcenow.png
-Exec=/mnt/sdb1/AppImages/GeForceNow.AppImage
-Terminal=false
-Categories=GeForceNow;games
