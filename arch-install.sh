@@ -20,12 +20,13 @@ else
     echo "fwupd está instalado."
 fi
 
-echo "Actualizando paquetes y firmware"
+# Actualizar paquetes y firmware
 sudo pacman -Syyuu --noconfirm --needed
 fwupdmgr get-devices
 fwupdmgr refresh
 fwupdmgr get-updates
 fwupdmgr update
+echo -e "Se han Actualizado paquetes y firmware"
 
 # Checar si paru está instalado
 if command -v paru >/dev/null; then
@@ -81,16 +82,18 @@ paru -S archlinux-tweak-tool-git bashtop-git eww-wayland gtklock heroic-games-la
     
 # Recargar Fuentes
 fc-cache -vf
+echo -e "Se han recargado las fuentes del Sistema..."
 
 sleep 3
 
+# Configuracion de ufw
 sudo ufw limit 22/tcp
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw enable
-
+echo -e "Se han configurado las reglas del Firmware..."
 
 sleep 3
 
