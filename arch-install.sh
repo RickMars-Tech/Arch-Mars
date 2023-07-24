@@ -110,14 +110,23 @@ chmod +x ~/.config/hypr/scripts/xdg-portal-hyprland
 chmod +x ~/.config/hypr/scripts/minimize-steam
 chmod +x ~/.config/hypr/scripts/gamemode.sh
 # Scripts de eww
-chmod +x ~/.config/eww/scripts/launch_bar
-chmod +x ~/.config/eww/scripts/battery
-chmod +x ~/.config/eww/scripts/mem-ad
-chmod +x ~/.config/eww/scripts/memory
-chmod +x ~/.config/eww/scripts/music_info
-chmod +x ~/.config/eww/scripts/pop
-chmod +x ~/.config/eww/scripts/wifi
-chmod +x ~/.config/eww/scripts/workspace
+chmod +x ~/.config/eww/scripts/apps
+chmod +x ~/.config/eww/scripts/bluetooth
+chmod +x ~/.config/eww/scripts/brightness
+chmod +x ~/.config/eww/scripts/events
+chmod +x ~/.config/eww/scripts/hyprland
+chmod +x ~/.config/eww/scripts/init
+chmod +x ~/.config/eww/scripts/launcher
+chmod +x ~/.config/eww/scripts/network
+chmod +x ~/.config/eww/scripts/night_light
+chmod +x ~/.config/eww/scripts/notifications
+chmod +x ~/.config/eww/scripts/osd
+chmod +x ~/.config/eww/scripts/player
+chmod +x ~/.config/eww/scripts/power
+chmod +x ~/.config/eww/scripts/theme
+chmod +x ~/.config/eww/scripts/volume
+chmod +x ~/.config/eww/scripts/weather
+chmod +x ~/.config/eww/scripts/myshell/myshell
 
 #~~ ZRAM-GENERATOR
 # 0/Verificar módulo de zram
