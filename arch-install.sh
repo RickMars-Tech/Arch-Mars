@@ -58,7 +58,8 @@ sleep 2
 echo "Instalando Aplicaciones por Flatpak"
 sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Discord \
     com.github.tchx84.Flatseal com.usebottles.bottles org.onlyoffice.desktopeditors org.kde.krita \
-    io.github.mgerhardy.vengi.voxedit io.github.hmlendea.geforcenow-electron 2>&1 | tee -a "$LOG"
+    io.github.mgerhardy.vengi.voxedit io.github.hmlendea.geforcenow-electron \
+    net.veloren.airshipper 2>&1 | tee -a "$LOG"
 
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
