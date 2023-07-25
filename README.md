@@ -1,9 +1,7 @@
 # ArchMars
-Esta es mi configuracion personal de Arch y no recomiendo usarla en tu maquina.
+Esta es mi configuracion personal de Arch, recomiendo editarlo a gusto para una mejor personalizacion y para evitar errores.
 
-Editalo a tu gusto para evitar errores.
-
-Asegúrese de que base-devel esté instalado antes de continuar.
+Asegurate de que base-devel esté instalado antes de continuar.
 
 
 # Problemas conocidos
@@ -29,3 +27,5 @@ asunto
   GitHub oficial de Hyprland: https://github.com/hyprwm/Hyprland
   
   Archivos de Configuración de ChrisTitus: https://github.com/ChrisTitusTech/hyprland-titus
+
+  
