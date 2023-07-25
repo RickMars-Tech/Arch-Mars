@@ -63,7 +63,7 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Di
 
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
-paru -S archlinux-tweak-tool-git bashtop-git eww-wayland gtklock hyprpicker-git pamac-aur powerpill playerctl-git \
+paru -S archlinux-tweak-tool-git bashtop-git bottles eww-wayland gtklock hyprpicker-git pamac-aur powerpill playerctl-git \
     sddm sddm-sugar-dark sddm-sugar-candy-git sddm-elegant-theme-git sddm-slice-git otf-font-awesome nerd-fonts-sf-mono \
     otf-nerd-fonts-monacob-mono gotop-bin acpi alsa-lib adobe-source-han-sans-kr-fonts ttf-jetbrains-mono-nerd \
     ttf-jetbrains-mono stacer-bin alsa-plugins bat bluez brightnessctl cups dunst ffmpeg ffmpegthumbnailer \
