@@ -102,7 +102,7 @@ cp -r dotconfig/config/* ~/.config/ 2>&1 | tee -a "$LOG"
 
 printf " Copiando archivos extra...\n"
 cp -r applications/ ~/.local/share/ 2>&1 | tee -a "$LOG"
-cp -r wal/ ~/ 2>&1 | tee -a "$LOG"
+cp -r dotconfig/wal/ ~/ 2>&1 | tee -a "$LOG"
 cp -r SKLauncher/ ~/ 2>&1 | tee -a "$LOG"
 
 printf " Dando permisos a archivos...\n"
