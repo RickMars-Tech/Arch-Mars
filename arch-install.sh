@@ -85,12 +85,13 @@ echo -e "Se han recargado las fuentes del Sistema..."
 sleep 3
 
 # Configuracion de ufw
+sudo ufw enable
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sleep 3
 sudo ufw limit 22/tcp
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-sudo ufw enable
 echo -e "Se han configurado las reglas del Firmware..."
 
 sleep 3
