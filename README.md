@@ -8,9 +8,9 @@ Asegúrese de que base-devel esté instalado antes de continuar.
 
 # Problemas conocidos
 
-Hyprland está en versión beta en el momento de crear estos archivos de configuración.
+Hyprland está en versión beta en el momento de crear estos archivos de configuración y muchas variables y configuraciones pueden se incompatibles con nuevas versiones de Hyprland.
+Los iconos de Eww pueden no aparecer.
 
-Ocasionalmente, el RX5700XT puede entrar en suspensión y requerir una recarga debido a una pantalla negra atascada.
 
 # Referencias
 
