@@ -45,7 +45,7 @@ sleep 3
 
 # Actualizar el sistema antes de proceder
 printf "${YELLOW} Actualización del sistema para evitar problemas\n"
-sudo pacman -Syu --noconfirm && paru 2>&1 | tee -a "$LOG"
+paru 2>&1 | tee -a "$LOG"
 
 sleep 2
 
