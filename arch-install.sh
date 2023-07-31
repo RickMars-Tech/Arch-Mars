@@ -103,6 +103,7 @@ printf " Copiando archivos extra...\n"
 cp -r applications/ ~/.local/share/ 2>&1 | tee -a "$LOG"
 cp -r dotconfig/wal/ ~/ 2>&1 | tee -a "$LOG"
 cp -r SKLauncher/ ~/ 2>&1 | tee -a "$LOG"
+cp -r dotconfig/.gtkrc-2.0 ~/
 
 printf " Dando permisos a archivos...\n"
 chmod +x ~/.config/hypr/scripts/xdg-portal-hyprland
