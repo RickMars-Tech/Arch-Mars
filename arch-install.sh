@@ -57,7 +57,7 @@ sleep 2
 # Instalaciones por Flatpak
 echo "Instalando Aplicaciones por Flatpak"
 sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Discord com.github.tchx84.Flatseal \
-    com.usebottles.bottles org.onlyoffice.desktopeditors io.github.mgerhardy.vengi.voxedit \
+    com.usebottles.bottles org.onlyoffice.desktopeditors io.github.mgerhardy.vengi.voxedit org.kde.KStyle.Adwaita \
     net.veloren.airshipper 2>&1 | tee -a "$LOG"
 
 # Instalacion de herramientas
