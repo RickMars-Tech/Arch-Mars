@@ -62,24 +62,23 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Di
 
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
-paru -S bashtop-git bottles eww-wayland gtklock hyprpicker-git pamac-aur powerpill                   \
-    playerctl-git sddm-git sddm-sugar-dark sddm-sugar-candy-git sddm-elegant-theme-git               \
-    sddm-slice-git otf-font-awesome nerd-fonts-sf-mono gotop-bin acpi alsa-lib waybar-hyprland-git   \
-    adobe-source-han-sans-kr-fonts bcache-tools ttf-daddytime-mono-nerd stacer-bin                   \
-    alsa-plugins bat bluez brightnessctl cups dunst ffmpeg ffmpegthumbnailer vapoursynth             \
-    gamemode gamescope-plus gedit geforcenow-electron giflib gnome-bluetooth-3.0 wlogout             \
-    gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs gimp grim gtk3 hyprland              \
-    hyprpaper imv inotify-tools jre17-openjdk jq kitty kvantum libadwaita lib32-alsa-lib             \
-    lib32-alsa-plugins lib32-giflib lib32-gnutls qt5ct lib32-gamemode lib32-gst-plugins-base-libs    \
-    lib32-libjpeg-turbo lib32-libldap lib32-libpng lib32-libxcomposite lib32-libxinerama lib32-mesa  \
-    lib32-mpg123 lib32-ncurses lib32-openal lib32-ocl-icd lib32-sqlite lib32-v4l-utils               \
-    lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo libldap libpng libpulse   \
-    libxcomposite libxinerama libxslt libva lutris lxappearance mouse_m908 mpv ncurses nautilus nawk \
-    networkmanager neovim neofetch android-udev nm-connection-editor noise-suppression-for-voice     \
-    ocl-icd openal pamixer papirus-icon-theme pavucontrol polkit-gnome python qt5-wayland qt5ct      \
-    qt6-wayland ranger rife-ncnn-vulkan rofi swww socat sqlite slurp steam swappy thunderbird        \
-    tumbler ufw upower v4l-utils virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder    \
-    wine-staging winetricks wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland xfsprogs zsh 2>&1 | tee -a "$LOG"
+paru -S android-udev bottles eww-wayland gtklock hyprpicker-git pamac-aur playerctl-git sddm-git       \
+    sddm-sugar-candy-git sddm-elegant-theme-git sddm-slice-git otf-font-awesome nerd-fonts-sf-mono     \
+    gotop-bin acpi alsa-lib waybar-hyprland-git adobe-source-han-sans-kr-fonts bcache-tools            \
+    ttf-daddytime-mono-nerd stacer-bin alsa-plugins bat bluez brightnessctl cups dunst ffmpeg          \
+    ffmpegthumbnailer vapoursynth gamemode gamescope-plus gedit geforcenow-electron giflib             \
+    gnome-bluetooth-3.0 wlogout gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs gimp grim  \
+    gtk3 hyprland hyprpaper imv inotify-tools jre17-openjdk jq kitty kvantum libadwaita lib32-alsa-lib \
+    lib32-alsa-plugins lib32-giflib lib32-gnutls lib32-gamemode lib32-gst-plugins-base-libs            \
+    lib32-libjpeg-turbo lib32-libldap lib32-libpng lib32-libxcomposite lib32-libxinerama lib32-mesa    \
+    lib32-mpg123 lib32-ncurses lib32-openal lib32-ocl-icd lib32-sqlite lib32-v4l-utils                 \
+    lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo libldap libpng libpulse     \
+    libxcomposite libxinerama libxslt libva lutris mouse_m908 mpv ncurses nautilus nawk neovim         \
+    neofetch nm-connection-editor noise-suppression-for-voice ocl-icd openal papirus-icon-theme        \
+    pavucontrol polkit-gnome python qt5-wayland qt5ct qt6-wayland ranger rife-ncnn-vulkan rofi socat   \
+    slurp steam swappy thunderbird tumbler ufw upower v4l-utils virt-manager vulkan-icd-loader         \
+    vulkan-radeon wayland wf-recorder wine-staging winetricks wl-clipboard xorg-xwayland               \
+    xdg-desktop-portal-hyprland zsh 2>&1 | tee -a "$LOG"
     
 # Recargar Fuentes
 fc-cache -vf
