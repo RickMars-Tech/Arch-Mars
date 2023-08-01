@@ -79,8 +79,7 @@ paru -S bashtop-git bottles eww-wayland gtklock hyprpicker-git pamac-aur powerpi
     ocl-icd openal pamixer papirus-icon-theme pavucontrol polkit-gnome python qt5-wayland qt5ct      \
     qt6-wayland ranger rife-ncnn-vulkan rofi swww socat sqlite slurp steam swappy thunderbird        \
     tumbler ufw upower v4l-utils virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder    \
-    wine-staging winetricks wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland xfsprogs zsh      \
-    zsh-autosuggestions-git zsh-fast-syntax-highlighting-git 2>&1 | tee -a "$LOG"
+    wine-staging winetricks wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland xfsprogs zsh 2>&1 | tee -a "$LOG"
     
 # Recargar Fuentes
 fc-cache -vf
