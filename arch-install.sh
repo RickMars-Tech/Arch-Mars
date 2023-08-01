@@ -30,12 +30,12 @@ echo -e "Se han Actualizado paquetes y firmware"
 
 # Checar si paru está instalado
 if command -v paru >/dev/null; then
-  echo "Paru $(paru -V | awk '{print $2}') is already installed in your system"
+  echo "Paru $(paru -V | awk '{print $2}') ya está instalado en su sistema"
 else
   if command -v yay >/dev/null; then
-    echo "Yay $(yay -V | awk '{print $2}') is installed in your system"
+    echo "Yay $(yay -V | awk '{print $2}') está instalado en su sistema"
   else
-    echo "Neither Paru nor Yay is present in your system."
+    echo "Ni Paru ni Yay están presentes en su sistema."
     echo "Installing Paru..."
     git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si && cd ..
   fi
@@ -50,7 +50,7 @@ paru 2>&1 | tee -a "$LOG"
 sleep 2
 
 # Activar Repositorio de Flatpak
-sudo pacman -S flatpak
+sudo pacman -S flatpak 2>&1 | tee -a "$LOG"
 
 sleep 2
 
@@ -108,7 +108,7 @@ printf " Copiando archivos extra...\n"
 cp -r applications/ ~/.local/share/ 2>&1 | tee -a "$LOG"
 cp -r dotconfig/wal/ ~/ 2>&1 | tee -a "$LOG"
 cp -r SKLauncher/ ~/ 2>&1 | tee -a "$LOG"
-cp -r dotconfig/.gtkrc-2.0 ~/
+cp -r dotconfig/.gtkrc-2.0 ~/ 2>&1 | tee -a "$LOG"
 
 printf " Dando permisos a archivos...\n"
 chmod +x ~/.config/hypr/scripts/xdg-portal-hyprland
