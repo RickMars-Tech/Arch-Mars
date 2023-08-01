@@ -56,26 +56,31 @@ sleep 2
 
 # Instalaciones por Flatpak
 echo "Instalando Aplicaciones por Flatpak"
-sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Discord com.github.tchx84.Flatseal \
-    com.usebottles.bottles org.onlyoffice.desktopeditors io.github.mgerhardy.vengi.voxedit \
-    net.veloren.airshipper 2>&1 | tee -a "$LOG"
+sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Discord \
+    com.github.tchx84.Flatseal com.usebottles.bottles org.onlyoffice.desktopeditors   \
+    io.github.mgerhardy.vengi.voxedit net.veloren.airshipper 2>&1 | tee -a "$LOG"
 
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
-paru -S archlinux-tweak-tool-git bashtop-git bottles eww-wayland gtklock hyprpicker-git pamac-aur powerpill playerctl-git \
-    sddm sddm-sugar-dark sddm-sugar-candy-git sddm-elegant-theme-git sddm-slice-git otf-font-awesome nerd-fonts-sf-mono \
-    otf-nerd-fonts-monacob-mono gotop-bin acpi alsa-lib adobe-source-han-sans-kr-fonts bcache-tools ttf-daddytime-mono-nerd \
-    stacer-bin alsa-plugins bat bluez brightnessctl cups dunst ffmpeg ffmpegthumbnailer vapoursynth gamemode gamescope-plus gedit \
-    geforcenow-electron giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs gimp grim gtk3 hyprland \
-    hyprpaper imv inotify-tools jre17-openjdk jq kitty kvantum libadwaita lib32-alsa-lib lib32-alsa-plugins lib32-giflib \
-    lib32-gnutls qt5ct lib32-gamemode lib32-gst-plugins-base-libs lib32-libjpeg-turbo adobe-source-han-sans-jp-fonts lib32-libldap \
-    lib32-libpng lib32-libxcomposite lib32-libxinerama lib32-mesa lib32-mpg123 lib32-ncurses lib32-openal lib32-ocl-icd lib32-sqlite \
-    lib32-v4l-utils lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo libldap libpng libpulse libxcomposite \
-    libxinerama libxslt libva lutris lxappearance mouse_m908 mpv ncurses nautilus nawk networkmanager neovim neofetch android-udev \
-    nm-connection-editor noise-suppression-for-voice ocl-icd openal pamixer papirus-icon-theme pavucontrol polkit-gnome python \
-    qt5-wayland qt5ct qt6-wayland ranger rife-ncnn-vulkan rofi swww socat sqlite slurp steam swappy thunderbird tumbler ufw upower \
-    v4l-utils virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder wine-staging winetricks wl-clipboard xorg-xwayland \
-    xdg-desktop-portal-hyprland xfsprogs zsh zsh-autosuggestions-git zsh-fast-syntax-highlighting-git 2>&1 | tee -a "$LOG"
+paru -S bashtop-git bottles eww-wayland gtklock hyprpicker-git pamac-aur powerpill                   \
+    playerctl-git sddm sddm-sugar-dark sddm-sugar-candy-git sddm-elegant-theme-git                   \
+    sddm-slice-git otf-font-awesome nerd-fonts-sf-mono gotop-bin acpi alsa-lib                       \
+    adobe-source-han-sans-kr-fonts bcache-tools ttf-daddytime-mono-nerd stacer-bin                   \
+    alsa-plugins bat bluez brightnessctl cups dunst ffmpeg ffmpegthumbnailer vapoursynth             \
+    gamemode gamescope-plus gedit geforcenow-electron giflib gnome-bluetooth-3.0                     \
+    gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs gimp grim gtk3 hyprland              \
+    hyprpaper imv inotify-tools jre17-openjdk jq kitty kvantum libadwaita lib32-alsa-lib             \
+    lib32-alsa-plugins lib32-giflib lib32-gnutls qt5ct lib32-gamemode lib32-gst-plugins-base-libs    \
+    lib32-libjpeg-turbo lib32-libldap lib32-libpng lib32-libxcomposite lib32-libxinerama lib32-mesa  \
+    lib32-mpg123 lib32-ncurses lib32-openal lib32-ocl-icd lib32-sqlite lib32-v4l-utils               \
+    lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo libldap libpng libpulse   \
+    libxcomposite libxinerama libxslt libva lutris lxappearance mouse_m908 mpv ncurses nautilus nawk \
+    networkmanager neovim neofetch android-udev nm-connection-editor noise-suppression-for-voice     \
+    ocl-icd openal pamixer papirus-icon-theme pavucontrol polkit-gnome python qt5-wayland qt5ct      \
+    qt6-wayland ranger rife-ncnn-vulkan rofi swww socat sqlite slurp steam swappy thunderbird        \
+    tumbler ufw upower v4l-utils virt-manager vulkan-icd-loader vulkan-radeon wayland wf-recorder    \
+    wine-staging winetricks wl-clipboard xorg-xwayland xdg-desktop-portal-hyprland xfsprogs zsh      \
+    zsh-autosuggestions-git zsh-fast-syntax-highlighting-git 2>&1 | tee -a "$LOG"
     
 # Recargar Fuentes
 fc-cache -vf
@@ -205,7 +210,7 @@ sleep 4
 
 #~~ Gamescope
 echo -e "Estableciendo prioridad de Gamescope..."
-setcap 'CAP_SYS_NICE=eip' "$(command -v gamescope)"
+sudo setcap 'CAP_SYS_NICE=eip' "$(command -v gamescope)" 2>&1 | tee -a "$LOG"
 
 #~~ KERNEL
 # Definir las variables que quieres establecer en el Kernel
