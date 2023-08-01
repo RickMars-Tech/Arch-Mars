@@ -67,7 +67,7 @@ paru -S bashtop-git bottles eww-wayland gtklock hyprpicker-git pamac-aur powerpi
     sddm-slice-git otf-font-awesome nerd-fonts-sf-mono gotop-bin acpi alsa-lib                       \
     adobe-source-han-sans-kr-fonts bcache-tools ttf-daddytime-mono-nerd stacer-bin                   \
     alsa-plugins bat bluez brightnessctl cups dunst ffmpeg ffmpegthumbnailer vapoursynth             \
-    gamemode gamescope-plus gedit geforcenow-electron giflib gnome-bluetooth-3.0                     \
+    gamemode gamescope-plus gedit geforcenow-electron giflib gnome-bluetooth-3.0 wlogout             \
     gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs gimp grim gtk3 hyprland              \
     hyprpaper imv inotify-tools jre17-openjdk jq kitty kvantum libadwaita lib32-alsa-lib             \
     lib32-alsa-plugins lib32-giflib lib32-gnutls qt5ct lib32-gamemode lib32-gst-plugins-base-libs    \
