@@ -1,0 +1,155 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mode": "dock",
+    "exclusive": false,
+    "height": 0,
+    "modules-left": [
+	    "wlr/workspaces",
+            "hyprland/window" 
+    ],
+    "modules-center": [
+	    "clock"
+    ],
+    "modules-right": [
+	    "gamemode",
+	    "tray", 
+	    "custom/updates",
+	    "network",
+	    "cpu",
+	    "memory",
+	    "custom/launcher",
+            "custom/logout" 
+    ],
+
+    "hyprland/window": {
+	    "format": " /{}",
+	    "separate-outputs": true
+    },
+
+    "wlr/workspaces": {
+	    "format": "{icon}",
+            "on-scroll-up": "hyprctl dispatch workspace e+1",
+            "on-scroll-down": "hyprctl dispatch workspace e-1",
+	    "on-click": "activate",
+            "format-icons": {
+		    "active": "󰮯",
+                    "default": "󰊠"
+	    }
+    },
+
+    "custom/launcher": {
+	    "format": "",
+            "on-click": "pavucontrol"
+    },
+
+    "gamemode": {
+	    "format": "{glyph}",
+            "format-alt": "{glyph} {count}",
+            "glyph": "",
+            "hide-not-running": true,
+            "use-icon": true,
+            "icon": "input-gaming-symbolic",
+            "icon-spacing": 4,
+            "icon-size": 20
+    },
+
+    "tray": {
+	    "icon-size": 14,
+            "spacing": 15
+    },
+
+
+    "custom/updates": {
+	    "format": "  {}",
+            "interval": 7200,    // Se ejecuta cada dos Horas
+            "exec": "updates=$(dnf check-update --quiet | wc -l); echo $updates; dnf check-update --quiet | column -t | tr '\\n' '\\r'",
+            "exec-if": "exit 0",
+            "on-click": "kitty -e sudo dnf update --refresh",
+            "signal": 8
+    },
+
+    "cpu": {
+	    "interval": 10,
+            "format": "{}% ",
+            "max-length": 10
+    },
+ 
+    "memory": {
+	    "interval": 30,
+	    "format": "{}% ",
+	    "max-length": 10
+    },
+
+    "custom/logout": {
+	    "format": "",
+            "on-click": "wlogout"
+    },
+
+    "network": {
+	    "interface": "enp7s0",
+	    "format": "{bandwidthTotalBytes}",
+	    "format-wifi": "{essid} ({signalStrength}%) ",
+	    "format-ethernet": "{bandwidthTotalBytes} 󰈀",
+	    "format-disconnected": "", //Un formato vacío ocultará el módulo.
+	    "format-disconnected": "",
+	    "tooltip-format": "{bandwidthTotalBytes}",
+	    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+	    "tooltip-format-ethernet": "{bandwidthTotalBytes} 󰈀",
+	    "tooltip-format-disconnected": "Disconnected",
+	    "max-length": 50
+    },
+
+
+    "clock": {
+	    "interval": 60,
+            "format": "  {:%I:%M}",
+            "max-length": 25
+    },
+
+
+    "battery": {
+	    "states": {
+		    "good": 95,
+                    "warning": 30,    
+	          "critical": 20
+	},
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", "", "", ""]
+    },
+
+
+    "pulseaudio": {
+	    "format": "{icon} {volume}%",
+            "tooltip": false,
+            "format-muted": " Muted",
+            "on-click": "pamixer -t",
+            "on-scroll-up": "pamixer -i 5",
+            "on-scroll-down": "pamixer -d 5",
+            "scroll-step": 5,
+            "format-icons": {
+		    "headphone": "",
+                    "hands-free": "",
+                    "headset": "",
+                    "phone": "",
+                    "portable": "",
+                    "car": "",
+                    "default": ["", "", ""]
+	    }
+    },
+
+
+    "pulseaudio#microphone": {
+	    "format": "{format_source}",
+            "format-source": " {volume}%",
+            "format-source-muted": " Muted",
+            "on-click": "pamixer --default-source -t",
+            "on-scroll-up": "pamixer --default-source -i 5",
+            "on-scroll-down": "pamixer --default-source -d 5",
+            "scroll-step": 5
+    }
+}
+

@@ -1,0 +1,185 @@
+* {
+    border: none;
+    border-radius: 10px;
+    font-family: "DaddyTimeMono", Mono;
+    font-weight: Bold;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(21, 18, 27, 0);
+    color: #CCCCCC;
+}
+
+tooltip {
+    background: #18191C;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #11111b;
+}
+
+#workspaces button {
+    padding: 5px 10px;
+    color: #484848 ;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#workspaces button.active {
+    color: #FFFFFF;
+}
+
+#workspaces button.focused {
+    color: #FFFFFF;
+    background: #18191C;
+    border-radius: 10px;
+   }
+
+#workspaces button.urgent {
+    color: #FFFFFF;
+    background: #18191C;
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    background: #18191C;
+    color: #CCCCCC;
+    border-radius: 10px;
+}
+
+#custom-language,
+#custom-updates,
+#custom-caffeine,
+#custom-weather,
+#custom-logout,
+#custom-launcher,
+#gamemode,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#workspaces,
+#cpu,
+#memory,
+#gamemode,
+#tray {
+    color: #CCCCCC;
+    background: #18191C;
+    padding: 0px 10px;
+    margin: 3px 0px;
+    margin-top: 10px;
+    border: 2px solid #181825;
+}
+
+#cpu {
+    color: #CCCCCC;
+    border-radius: 0px 0px 0px 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#memory {
+    color: #CCCCCC;
+    border-radius: 0px 10px 10px 0px; 
+    border-left: 0px;
+    border-right: 0px;
+    margin-right: 0px;
+}
+
+#gamemode {
+    background: #18191C;
+    color: #CCCCCC;
+    border-radius: 10px;
+    margin-left: 0px;
+    margin-right: 5px;
+}
+
+#tray {
+    color: #CCCCCC;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+#workspaces {
+    background: #18191C;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#custom-logout {
+    background: #18191C;
+    color: #CCCCCC;
+    border-radius: 0px 10px 10px 0px; 
+    border-left: 0px;
+    border-right: 0px;
+    margin-right: 5px;
+}
+
+#custom-launcher {
+    background: #18191C;
+    color: #CCCCCC;
+    border-radius: 10px 0px 0px 10px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-left: 5px;
+}
+
+#custom-caffeine {
+    color: #CCCCCC;
+    border-radius: 10px 0px 0px 10px;
+    border-right: 0px;
+    margin-left: 1px;
+}
+
+#custom-language {
+    color: #CCCCCC;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#custom-updates {
+    color: #CCCCCC;
+    border-left: 0px;
+    border-right: 5px;
+    margin-right: 5px;
+}
+
+#network {
+    color: #CCCCCC;
+    border-radius: 10px 0px 0px 10px; 
+    border-left: 0px;
+    border-right: 0px;
+    margin-right: 0px;
+}
+
+#window {
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#clock {
+    color: #CCCCCC;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 5px;
+    border-right: 0px;
+}
+
+#pulseaudio {
+    color: #CCCCCC;
+    border-radius: 10px 0px 0px 10px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#pulseaudio.microphone {
+    color: #CCCCCC;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 5px;
+}
