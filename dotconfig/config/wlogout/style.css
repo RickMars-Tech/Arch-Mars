@@ -10,18 +10,18 @@ button {
     background-position: center;
     background-size: 25%;
     border: none;
-    background-color: rgba(13, 13, 13, 1);
+    background-color: rgba(0,0,0,0.5);
     margin: 5px;
     transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 button:hover {
-    background-color: #181818;
+    background-color: rgba(0,0,0,0.5);
 }
 
 button:focus {
-    background-color: #181818;
-    color:   #0D0D0D;
+    background-color: rgba(0,0,0,0.5);
+    color:   rgba(0, 0, 0, 0.2);
 }
 
 #lock {
