@@ -64,10 +64,10 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Di
 echo "Instalando Herramientas y Aplicaciones"
 paru -S archlinux-tweak-tool-git bashtop-git bottles eww-wayland gtklock hyprpicker-git pamac-aur powerpill playerctl-git \
     sddm sddm-sugar-dark sddm-sugar-candy-git sddm-elegant-theme-git sddm-slice-git otf-font-awesome nerd-fonts-sf-mono \
-    otf-nerd-fonts-monacob-mono gotop-bin acpi alsa-lib adobe-source-han-sans-kr-fonts bcache-tools ttf-jetbrains-mono-nerd \
-    ttf-jetbrains-mono stacer-bin alsa-plugins bat bluez brightnessctl cups dunst ffmpeg ffmpegthumbnailer vapoursynth ttf-daddytime-mono-nerd \
-    gamemode gamescope-plus gedit geforcenow-electron giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs \
-    gimp grim gtk3 hyprland hyprpaper imv inotify-tools jre17-openjdk jq kitty kvantum libadwaita lib32-alsa-lib lib32-alsa-plugins lib32-giflib \
+    otf-nerd-fonts-monacob-mono gotop-bin acpi alsa-lib adobe-source-han-sans-kr-fonts bcache-tools ttf-daddytime-mono-nerd \
+    stacer-bin alsa-plugins bat bluez brightnessctl cups dunst ffmpeg ffmpegthumbnailer vapoursynth gamemode gamescope-plus gedit \
+    geforcenow-electron giflib gnome-bluetooth-3.0 gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs gimp grim gtk3 hyprland \
+    hyprpaper imv inotify-tools jre17-openjdk jq kitty kvantum libadwaita lib32-alsa-lib lib32-alsa-plugins lib32-giflib \
     lib32-gnutls qt5ct lib32-gamemode lib32-gst-plugins-base-libs lib32-libjpeg-turbo adobe-source-han-sans-jp-fonts lib32-libldap \
     lib32-libpng lib32-libxcomposite lib32-libxinerama lib32-mesa lib32-mpg123 lib32-ncurses lib32-openal lib32-ocl-icd lib32-sqlite \
     lib32-v4l-utils lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo libldap libpng libpulse libxcomposite \
