@@ -63,10 +63,10 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Di
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
 paru -S android-udev bottles eww-wayland gtklock hyprpicker-git pamac-aur playerctl-git sddm-git       \
-    sddm-sugar-candy-git sddm-elegant-theme-git sddm-slice-git otf-font-awesome nerd-fonts-sf-mono     \
-    gotop-bin acpi alsa-lib waybar-hyprland-git adobe-source-han-sans-kr-fonts bcache-tools            \
-    ttf-daddytime-mono-nerd stacer-bin alsa-plugins bat bluez brightnessctl cups dunst ffmpeg          \
-    ffmpegthumbnailer vapoursynth gamemode gamescope-plus gedit geforcenow-electron giflib             \
+    sddm-nordic-theme-git sddm-elegant-theme-git sddm-slice-git otf-font-awesome nerd-fonts-sf-mono    \
+    sddm-conf-git gotop-bin acpi alsa-lib waybar-hyprland-git adobe-source-han-sans-kr-fonts           \
+    bcache-tools ttf-daddytime-mono-nerd stacer-bin alsa-plugins bat bluez brightnessctl cups dunst    \
+    ffmpeg ffmpegthumbnailer vapoursynth gamemode gamescope-plus gedit geforcenow-electron giflib      \
     gnome-bluetooth-3.0 wlogout gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs gimp grim  \
     gtk3 hyprland hyprpaper imv inotify-tools jre17-openjdk jq kitty kvantum libadwaita lib32-alsa-lib \
     lib32-alsa-plugins lib32-giflib lib32-gnutls lib32-gamemode lib32-gst-plugins-base-libs            \
