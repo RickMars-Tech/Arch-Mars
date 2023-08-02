@@ -71,7 +71,7 @@ paru -S android-udev bottles eww-wayland gtklock hyprpicker-git pamac-aur player
     gtk3 hyprland hyprpaper imv inotify-tools jre17-openjdk jq kitty kvantum libadwaita lib32-alsa-lib \
     lib32-alsa-plugins lib32-giflib lib32-gnutls lib32-gamemode lib32-gst-plugins-base-libs            \
     lib32-libjpeg-turbo lib32-libldap lib32-libpng lib32-libxcomposite lib32-libxinerama lib32-mesa    \
-    lib32-mpg123 lib32-ncurses lib32-openal lib32-ocl-icd lib32-sqlite lib32-v4l-utils                 \
+    lib32-mpg123 lib32-ncurses lib32-openal lib32-ocl-icd lib32-sqlite lib32-v4l-utils lmms            \
     lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo libldap libpng libpulse     \
     libxcomposite libxinerama libxslt libva lutris mouse_m908 mpv ncurses nautilus nawk neovim         \
     neofetch nm-connection-editor noise-suppression-for-voice ocl-icd openal papirus-icon-theme        \
