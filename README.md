@@ -3,6 +3,17 @@ Esta es mi configuracion personal de Arch, recomiendo editarlo a gusto para una 
 
 Asegurate de que base-devel esté instalado antes de continuar.
 
+# Proceso de Instalacion
+
+```bash
+git clone https://github.com/RickMars-Tech/Arch-Mars.git
+cd Arch-Mars
+chmod +x arch-install.sh
+./arch-install.sh
+```
+
+# NOTAS
+- Cuando se instale Oh-My-Zsh debes salir(escribir exit en la terminal) para que se termine el proceso de instalacion del script, de otra forma no lo hara.
 
 # Problemas conocidos
 
