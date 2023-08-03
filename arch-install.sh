@@ -78,7 +78,7 @@ paru -S android-udev bottles eww-wayland gtklock hyprpicker-git pamac-aur player
     pavucontrol polkit-gnome python qt5-wayland qt5ct qt6-wayland ranger rife-ncnn-vulkan rofi socat   \
     slurp steam swappy thunderbird tumbler ufw upower v4l-utils virt-manager vulkan-icd-loader         \
     vulkan-radeon wayland wf-recorder wine-staging winetricks wl-clipboard xorg-xwayland               \
-    xdg-desktop-portal-hyprland zsh libappimage appimagelauncher bluez-plugins-ps3 sixad-git 2>&1 | tee -a "$LOG"
+    xdg-desktop-portal-hyprland zsh libappimage appimagelauncher 2>&1 | tee -a "$LOG"
     
 # Recargar Fuentes
 fc-cache -vf
@@ -103,9 +103,9 @@ printf " Copiando archivos de configuracion...\n"
 cp -r dotconfig/config/* ~/.config/ 2>&1 | tee -a "$LOG"
 
 printf " Copiando archivos extra...\n"
-cp -r applications/ ~/.local/share/ 2>&1 | tee -a "$LOG"
+cp -r dotconfig/applications/ ~/.local/share/ 2>&1 | tee -a "$LOG"
 cp -r dotconfig/wal/ ~/ 2>&1 | tee -a "$LOG"
-cp -r SKLauncher/ ~/ 2>&1 | tee -a "$LOG"
+cp -r dotconfig/SKLauncher/ ~/ 2>&1 | tee -a "$LOG"
 cp -r dotconfig/.gtkrc-2.0 ~/ 2>&1 | tee -a "$LOG"
 
 printf " Dando permisos a archivos...\n"
