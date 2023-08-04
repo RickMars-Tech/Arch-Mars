@@ -47,10 +47,10 @@ sleep 2
 
 # Actualizar el sistema antes de proceder
 printf "${YELLOW} Actualización del sistema para evitar problemas\n"
-paru 2>&1 | tee -a "$LOG"
+paru --noconfirm --needed 2>&1 | tee -a "$LOG"
 
 # Activar Repositorio de Flatpak
-sudo pacman -S flatpak 2>&1 | tee -a "$LOG"
+sudo pacman -S --noconfirm --needed flatpak 2>&1 | tee -a "$LOG"
 
 # Instalaciones por Flatpak
 echo "Instalando Aplicaciones por Flatpak"
