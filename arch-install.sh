@@ -132,6 +132,17 @@ chmod +x ~/.config/eww/scripts/weather
 chmod +x ~/.config/eww/scripts/myshell/myshell
 
 #~~ ZRAM-GENERATOR
+
+# Verificar si zram-generator está instalado
+if pacman -Qi zram-generator &> /dev/null; then
+    echo "zram-generator ya está instalado."
+else
+    # Instalar zram-generator si no está instalado
+    echo "Instalando zram-generator..."
+    sudo pacman -S zram-generator
+    echo "zram-generator se ha instalado correctamente."
+fi
+
 # 0/Verificar módulo de zram
 if sudo grep -q "^[zram0]$" /etc/systemd/zram-generator.conf; then
     echo "[zram0] ya está configurado en zstd"
