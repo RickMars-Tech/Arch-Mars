@@ -41,26 +41,18 @@ else
   fi
 fi
 
-sleep 3
-
 # Actualizar el sistema antes de proceder
 printf "${YELLOW} Actualización del sistema para evitar problemas\n"
 paru 2>&1 | tee -a "$LOG"
 
-sleep 2
-
 # Activar Repositorio de Flatpak
 sudo pacman -S flatpak 2>&1 | tee -a "$LOG"
-
-sleep 2
 
 # Instalaciones por Flatpak
 echo "Instalando Aplicaciones por Flatpak"
 sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Discord \
     com.github.tchx84.Flatseal com.usebottles.bottles org.onlyoffice.desktopeditors   \
     io.github.mgerhardy.vengi.voxedit net.veloren.airshipper 2>&1 | tee -a "$LOG"
-
-sleep 2
 
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
@@ -86,19 +78,14 @@ paru -S android-udev bottles eww-wayland-git gtklock hyprpicker-git pamac-aur pl
 fc-cache -vf
 echo -e "Se han recargado las fuentes del Sistema..."
 
-sleep 3
-
 # Configuracion de ufw
 sudo ufw enable
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
-sleep 3
 sudo ufw limit 22/tcp
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 echo -e "Se han configurado las reglas del Firmware..."
-
-sleep 3
 
 # Moviendo "cosas"
 printf " Copiando archivos de configuracion...\n"
@@ -141,7 +128,7 @@ if pacman -Qi zram-generator &> /dev/null; then
 else
     # Instalar zram-generator si no está instalado
     echo "Instalando zram-generator..."
-    sudo pacman -S zram-generator
+    sudo pacman -S zram-generator --needed
     echo "zram-generator se ha instalado correctamente."
 fi
 
@@ -189,8 +176,6 @@ fi
 echo -e "vm.max_map_count=1048576
 vm.swappiness=5" | sudo tee -a /etc/sysctl.d/90-override.conf > /dev/null
 
-sleep 4
-
 # Verificar si Zsh ya está configurado como el intérprete predeterminado
 if [[ $(basename "$SHELL") != "zsh" ]]; then
   # Establecer Zsh como el intérprete predeterminado
@@ -217,8 +202,6 @@ else
   echo "La instalación de Oh My Zsh falló. No se clonarán las configuraciones."
 fi
 
-sleep 4
-
 #~~ Gamescope
 echo -e "Estableciendo prioridad de Gamescope..."
 sudo setcap 'CAP_SYS_NICE=eip' "$(command -v gamescope)" 2>&1 | tee -a "$LOG"
@@ -244,8 +227,6 @@ if [ -f "$grub_config" ]; then
 else
   echo "El archivo de configuración de GRUB no se encontró."
 fi
-
-sleep 3
 
 # Habilitar sddm
 sudo systemctl enable sddm
