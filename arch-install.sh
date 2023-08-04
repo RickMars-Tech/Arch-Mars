@@ -60,9 +60,11 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Di
     com.github.tchx84.Flatseal com.usebottles.bottles org.onlyoffice.desktopeditors   \
     io.github.mgerhardy.vengi.voxedit net.veloren.airshipper 2>&1 | tee -a "$LOG"
 
+sleep 2
+
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
-paru -S android-udev bottles eww-wayland gtklock hyprpicker-git pamac-aur playerctl-git sddm-git       \
+paru -S android-udev bottles eww-wayland-git gtklock hyprpicker-git pamac-aur playerctl-git sddm-git       \
     sddm-nordic-theme-git sddm-elegant-theme-git sddm-slice-git otf-font-awesome nerd-fonts-sf-mono    \
     sddm-conf-git gotop-bin acpi alsa-lib waybar-hyprland-git adobe-source-han-sans-kr-fonts           \
     bcache-tools ttf-daddytime-mono-nerd stacer-bin alsa-plugins bat bluez brightnessctl cups dunst    \
