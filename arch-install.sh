@@ -20,6 +20,8 @@ else
     echo "fwupd está instalado."
 fi
 
+sleep 2
+
 # Actualizar paquetes y firmware
 sudo pacman -Syyuu --noconfirm --needed
 fwupdmgr get-devices
@@ -40,6 +42,8 @@ else
     git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si && cd ..
   fi
 fi
+
+sleep 2
 
 # Actualizar el sistema antes de proceder
 printf "${YELLOW} Actualización del sistema para evitar problemas\n"
@@ -73,7 +77,9 @@ paru -S android-udev bottles eww-wayland-git gtklock hyprpicker-git pamac-aur pl
     slurp steam swappy thunderbird tumbler ufw upower v4l-utils virt-manager vulkan-icd-loader         \
     vulkan-radeon wayland wf-recorder wine-staging winetricks wl-clipboard xorg-xwayland pipewire      \
     xdg-desktop-portal-hyprland zsh libappimage appimagelauncher 2>&1 | tee -a "$LOG"
-    
+
+sleep 2
+
 # Recargar Fuentes
 fc-cache -vf
 echo -e "Se han recargado las fuentes del Sistema..."
