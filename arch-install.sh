@@ -56,7 +56,7 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Di
 
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
-paru -S android-udev bottles eww-wayland-git gtklock hyprpicker-git pamac-aur playerctl-git sddm-git       \
+paru -S android-udev bottles eww-wayland-git gtklock hyprpicker-git pamac-aur playerctl-git sddm-git   \
     sddm-nordic-theme-git sddm-elegant-theme-git sddm-slice-git otf-font-awesome nerd-fonts-sf-mono    \
     sddm-conf-git gotop-bin acpi alsa-lib waybar-hyprland-git adobe-source-han-sans-kr-fonts           \
     bcache-tools ttf-daddytime-mono-nerd stacer-bin alsa-plugins bat bluez brightnessctl cups dunst    \
@@ -71,7 +71,7 @@ paru -S android-udev bottles eww-wayland-git gtklock hyprpicker-git pamac-aur pl
     neofetch nm-connection-editor noise-suppression-for-voice ocl-icd openal papirus-icon-theme        \
     pavucontrol polkit-gnome python qt5-wayland qt5ct qt6-wayland ranger rife-ncnn-vulkan rofi socat   \
     slurp steam swappy thunderbird tumbler ufw upower v4l-utils virt-manager vulkan-icd-loader         \
-    vulkan-radeon wayland wf-recorder wine-staging winetricks wl-clipboard xorg-xwayland               \
+    vulkan-radeon wayland wf-recorder wine-staging winetricks wl-clipboard xorg-xwayland pipewire      \
     xdg-desktop-portal-hyprland zsh libappimage appimagelauncher 2>&1 | tee -a "$LOG"
     
 # Recargar Fuentes
