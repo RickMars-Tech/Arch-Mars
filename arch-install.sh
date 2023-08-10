@@ -101,6 +101,8 @@ printf " Copiando archivos extra...\n"
 cp -r dotconfig/wal/ ~/ 2>&1 | tee -a "$LOG"
 cp -r dotconfig/.gtkrc-2.0 ~/ 2>&1 | tee -a "$LOG"
 
+sleep 3
+
 printf " Dando permisos a archivos...\n"
 chmod +x ~/.config/hypr/scripts/xdg-portal-hyprland
 chmod +x ~/.config/hypr/scripts/minimize-steam
