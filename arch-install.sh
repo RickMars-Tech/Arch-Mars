@@ -234,4 +234,4 @@ else
 fi
 
 # Habilitar sddm
-sudo systemctl enable sddm
+sudo systemctl enable gdm
