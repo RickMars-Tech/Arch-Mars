@@ -60,9 +60,8 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Di
 
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
-paru -S asusctl-git android-udev bleachbit bottles eww-wayland gtklock hyprpicker-git pamac-aur          \
-    playerctl-git sddm-nordic-theme-git sddm-elegant-theme-git sddm-slice-git otf-font-awesome           \
-    sddm-conf-git gotop-bin acpi alsa-lib waybar-hyprland-git adobe-source-han-sans-kr-fonts sddm        \
+paru -S asusctl-git android-udev bleachbit bottles eww-wayland hyprpicker-git pamac-aur playerctl-git    \
+    otf-font-awesome gotop-bin acpi alsa-lib waybar-hyprland-git adobe-source-han-sans-kr-fonts gdm      \
     bcache-tools ttf-daddytime-mono-nerd stacer-bin alsa-plugins bat bluez brightnessctl cups dunst      \
     ffmpeg ffmpegthumbnailer vapoursynth gamemode gamescope-plus gedit geforcenow-electron giflib        \
     gnome-bluetooth-3.0 wlogout gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs gimp grim    \
@@ -71,7 +70,7 @@ paru -S asusctl-git android-udev bleachbit bottles eww-wayland gtklock hyprpicke
     lib32-libjpeg-turbo lib32-libldap  lib32-libxcomposite lib32-libxinerama nerd-fonts-sf-mono          \
     lib32-mesa lib32-mpg123 lib32-ncurses lib32-openal lib32-ocl-icd lib32-sqlite lib32-v4l-utils lmms   \
     lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo libldap libpng libpulse       \
-    libxcomposite libxinerama libxslt libva lutris mouse_m908 mpv ncurses nautilus nawk neovim           \
+    libxcomposite libxinerama libxslt libva lutris mouse_m908 mpv ncurses nautilus nawk neovim gtklock   \
     neofetch nm-connection-editor noise-suppression-for-voice ocl-icd openal papirus-icon-theme          \
     pavucontrol polkit-gnome python qt5-wayland qt5ct qt6-wayland ranger rife-ncnn-vulkan rofi socat     \
     slurp steam swappy thunderbird tumbler ufw upower v4l-utils virt-manager vulkan-icd-loader           \
