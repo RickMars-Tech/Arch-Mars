@@ -62,7 +62,7 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Di
 echo "Instalando Herramientas y Aplicaciones"
 paru -S asusctl-git android-udev bleachbit bottles eww-wayland hyprpicker-git pamac-aur playerctl-git    \
     otf-font-awesome gotop-bin acpi alsa-lib waybar-hyprland-git adobe-source-han-sans-kr-fonts gdm      \
-    bcache-tools ttf-daddytime-mono-nerd stacer-bin alsa-plugins bat bluez brightnessctl cups dunst      \
+    ttf-daddytime-mono-nerd stacer-bin alsa-plugins bat bluez brightnessctl cups dunst                   \
     ffmpeg ffmpegthumbnailer vapoursynth gamemode gamescope-plus gedit geforcenow-electron giflib        \
     gnome-bluetooth-3.0 wlogout gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs gimp grim    \
     gtk3 hyprland hyprpaper imv inotify-tools jre17-openjdk jq kitty kvantum libadwaita lib32-alsa-lib   \
