@@ -20,8 +20,6 @@ else
     echo "fwupd está instalado."
 fi
 
-sleep 2
-
 # Actualizar paquetes y firmware
 sudo pacman -Syyuu --noconfirm --needed
 fwupdmgr get-devices
@@ -42,8 +40,6 @@ else
     git clone https://aur.archlinux.org/paru-bin.git && cd paru-bin && makepkg -si && cd ..
   fi
 fi
-
-sleep 2
 
 # Actualizar el sistema antes de proceder
 printf "${YELLOW} Actualización del sistema para evitar problemas\n"
@@ -97,8 +93,6 @@ cp -r dotconfig/config/* ~/.config/ 2>&1 | tee -a "$LOG"
 printf " Copiando archivos extra...\n"
 cp -r dotconfig/wal/ ~/ 2>&1 | tee -a "$LOG"
 cp -r dotconfig/.gtkrc-2.0 ~/ 2>&1 | tee -a "$LOG"
-
-sleep 3
 
 printf " Dando permisos a archivos...\n"
 chmod +x ~/.config/hypr/scripts/xdg-portal-hyprland
