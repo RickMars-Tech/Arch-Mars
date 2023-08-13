@@ -57,7 +57,7 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Di
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
 paru -S asusctl-git android-udev bleachbit bottles eww-wayland hyprpicker-git pamac-aur playerctl-git    \
-    otf-font-awesome gotop-bin acpi alsa-lib waybar-hyprland-git adobe-source-han-sans-kr-fonts gdm      \
+    otf-font-awesome gotop-bin acpi alsa-lib waybar-hyprland-git adobe-source-han-sans-kr-fonts sddm-git \
     ttf-daddytime-mono-nerd stacer-bin alsa-plugins bat bluez brightnessctl cups dunst appimagelauncher  \
     ffmpeg ffmpegthumbnailer vapoursynth gamemode gamescope-plus gedit geforcenow-electron giflib        \
     gnome-bluetooth-3.0 wlogout gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs gimp grim    \
@@ -226,4 +226,4 @@ else
 fi
 
 # Habilitar sddm
-sudo systemctl enable gdm
+sudo systemctl enable sddm
