@@ -62,12 +62,12 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Di
 echo "Instalando Herramientas y Aplicaciones"
 paru -S asusctl-git android-udev bleachbit bottles eww-wayland hyprpicker-git pamac-aur playerctl-git    \
     otf-font-awesome gotop-bin acpi alsa-lib waybar-hyprland-git adobe-source-han-sans-kr-fonts gdm      \
-    ttf-daddytime-mono-nerd stacer-bin alsa-plugins bat bluez brightnessctl cups dunst                   \
+    ttf-daddytime-mono-nerd stacer-bin alsa-plugins bat bluez brightnessctl cups dunst appimagelauncher  \
     ffmpeg ffmpegthumbnailer vapoursynth gamemode gamescope-plus gedit geforcenow-electron giflib        \
     gnome-bluetooth-3.0 wlogout gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs gimp grim    \
     gtk3 hyprland hyprpaper imv inotify-tools jre17-openjdk jq kitty kvantum libadwaita lib32-alsa-lib   \
     lib32-alsa-plugins lib32-giflib lib32-gnutls lib32-gamemode lib32-gst-plugins-base-libs lib32-libpng \
-    lib32-libjpeg-turbo lib32-libldap  lib32-libxcomposite lib32-libxinerama nerd-fonts-sf-mono          \
+    lib32-libjpeg-turbo lib32-libldap lib32-libxcomposite lib32-libxinerama libappimage vkbasalt         \
     lib32-mesa lib32-mpg123 lib32-ncurses lib32-openal lib32-ocl-icd lib32-sqlite lib32-v4l-utils lmms   \
     lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo libldap libpng libpulse       \
     libxcomposite libxinerama libxslt libva lutris mouse_m908 mpv ncurses nautilus nawk neovim gtklock   \
@@ -75,9 +75,7 @@ paru -S asusctl-git android-udev bleachbit bottles eww-wayland hyprpicker-git pa
     pavucontrol polkit-gnome python qt5-wayland qt5ct qt6-wayland ranger rife-ncnn-vulkan rofi socat     \
     slurp steam swappy thunderbird tumbler ufw upower v4l-utils virt-manager vulkan-icd-loader           \
     vulkan-radeon wayland wf-recorder wine-staging winetricks wl-clipboard xorg-xwayland pipewire        \
-    xdg-desktop-portal-hyprland zsh libappimage appimagelauncher 2>&1 | tee -a "$LOG"
-
-sleep 2
+    xdg-desktop-portal-hyprland zsh 2>&1 | tee -a "$LOG"
 
 # Recargar Fuentes
 fc-cache -vf
