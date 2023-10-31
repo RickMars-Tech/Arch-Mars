@@ -56,22 +56,17 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Di
 
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
-paru -S asusctl-git android-udev bleachbit bottles eww-wayland hyprpicker-git pamac-aur playerctl-git    \
-    otf-font-awesome gotop-bin acpi alsa-lib waybar-hyprland-git adobe-source-han-sans-kr-fonts sddm-git \
-    ttf-daddytime-mono-nerd stacer-bin alsa-plugins bat bluez brightnessctl cups dunst appimagelauncher  \
-    ffmpeg ffmpegthumbnailer vapoursynth gamemode gamescope-plus gedit geforcenow-electron giflib        \
-    gnome-bluetooth-3.0 wlogout gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs gimp grim    \
-    gtk3 hyprland hyprpaper imv inotify-tools jre17-openjdk jq kitty kvantum libadwaita lib32-alsa-lib   \
-    lib32-alsa-plugins lib32-giflib lib32-gnutls lib32-gamemode lib32-gst-plugins-base-libs lib32-libpng \
-    lib32-libjpeg-turbo lib32-libldap lib32-libxcomposite lib32-libxinerama libappimage vkbasalt         \
-    lib32-mesa lib32-mpg123 lib32-ncurses lib32-openal lib32-ocl-icd lib32-sqlite lib32-v4l-utils lmms   \
-    lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo libldap libpng libpulse       \
-    libxcomposite libxinerama libxslt libva lutris mouse_m908 mpv ncurses nautilus nawk neovim gtklock   \
-    neofetch nm-connection-editor noise-suppression-for-voice ocl-icd openal papirus-icon-theme          \
-    pavucontrol polkit-gnome python qt5-wayland qt5ct qt6-wayland ranger rife-ncnn-vulkan rofi socat     \
-    slurp steam swappy thunderbird tumbler ufw upower v4l-utils virt-manager vulkan-icd-loader           \
-    vulkan-radeon wayland wf-recorder wine-staging winetricks wl-clipboard xorg-xwayland pipewire        \
-    xdg-desktop-portal-hyprland zsh 2>&1 | tee -a "$LOG"
+paru -S bleachbit bottles pamac-aur otf-font-awesome gotop-bin alsa-lib adobe-source-han-sans-kr-fonts     \
+    ttf-daddytime-mono-nerd stacer-bin alsa-plugins bat cups appimagelauncher ffmpeg ffmpegthumbnailer     \
+    vapoursynth gamemode gamescope-plus geforcenow-electron giflib gnome-bluetooth-3.0 wlogout             \
+    gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs gimp jre17-openjdk jq kitty libadwaita     \
+    lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls lib32-gamemode lib32-gst-plugins-base-libs \
+    lib32-libldap libappimage vkbasalt lib32-mesa lib32-ncurses lib32-openal lib32-ocl-icd lib32-v4l-utils \
+    lmms lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo libldap libpng libpulse    \
+    libxslt libva lutris mouse_m908 mpv nautilus nawk neovim neofetch  noise-suppression-for-voice ocl-icd \
+    openal papirus-icon-theme pavucontrol polkit-gnome python qt5-wayland qt5ct qt6-wayland ranger         \
+    rife-ncnn-vulkan rofi socat steam  thunderbird tumbler ufw  v4l-utils virt-manager vulkan-icd-loader   \
+    vulkan-radeon wayland wine-staging winetricks wl-clipboard xorg-xwayland pipewire zsh 2>&1 | tee -a "$LOG"
 
 # Recargar Fuentes
 fc-cache -vf
@@ -93,6 +88,16 @@ cp -r dotconfig/config/* ~/.config/ 2>&1 | tee -a "$LOG"
 printf " Copiando archivos extra...\n"
 cp -r dotconfig/wal/ ~/ 2>&1 | tee -a "$LOG"
 cp -r dotconfig/.gtkrc-2.0 ~/ 2>&1 | tee -a "$LOG"
+
+# Pregunta al usuario si desea instalar Hyperland en Arch Linux
+read -p "¿Quieres instalar Hyperland en Arch Linux? (s/n): " respuesta
+
+# Comprueba la respuesta del usuario
+if [[ $respuesta == "s" || $respuesta == "S" ]]; then
+    echo "Iniciando la instalación de Hyperland en Arch Linux..."
+paru -S xdg-desktop-portal-hyprland wf-recorder upower swappy slurp nm-connection-editor gtklock kvantum   \
+     gtk3 hyprland hyprpaper imv inotify-tools grim gedit dunst brightnessctl sddm-git waybar-hyprland-git \
+     acpi playerctl-git hyprpicker-git eww-wayland
 
 printf " Dando permisos a archivos...\n"
 chmod +x ~/.config/hypr/scripts/xdg-portal-hyprland
@@ -116,6 +121,11 @@ chmod +x ~/.config/eww/scripts/theme
 chmod +x ~/.config/eww/scripts/volume
 chmod +x ~/.config/eww/scripts/weather
 chmod +x ~/.config/eww/scripts/myshell/myshell
+    
+    echo "Hyperland ha sido instalado y configurado correctamente."
+else
+    echo "No se realizará la instalación de Hyperland."
+fi
 
 #~~ ZRAM-GENERATOR
 
@@ -225,5 +235,12 @@ else
   echo "El archivo de configuración de GRUB no se encontró."
 fi
 
-# Habilitar sddm
-sudo systemctl enable sddm
+# Verifica si SDDM está instalado en el sistema
+if [ -x "$(command -v sddm)" ]; then
+    echo "SDDM está instalado en el sistema."
+    # Habilita el servicio SDDM utilizando systemctl con sudo
+    sudo systemctl enable sddm
+    echo "El servicio SDDM ha sido habilitado correctamente."
+else
+    echo "SDDM no está instalado en el sistema."
+fi
