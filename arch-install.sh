@@ -56,7 +56,7 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Di
 
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
-pacman -S  --needed zsh ttf-daddytime-mono-nerd ffmpeg ffmpegthumbnailer vapoursynth kitty lib32-mesa      \
+pacman -S alsa-utils zsh ttf-daddytime-mono-nerd ffmpeg ffmpegthumbnailer vapoursynth kitty lib32-mesa     \
         vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader gamemode neovim        \
         lib32-gamemode wine-staging wine-gecko wine-mono lib32-alsa-lib lib32-alsa-plugins lib32-pipewire  \
         pipewire-pulse lib32-libpulse pipewire-alsa lib32-alsa-lib lib32-alsa-plugins lib32-alsa-oss       \
