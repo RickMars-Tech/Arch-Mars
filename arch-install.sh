@@ -61,7 +61,7 @@ sudo pacman -S alsa-utils zsh ttf-daddytime-mono-nerd ffmpeg ffmpegthumbnailer v
         neovim lib32-gamemode wine-staging wine-gecko wine-mono lib32-alsa-lib lib32-alsa-plugins          \
         pipewire-pulse lib32-libpulse pipewire-alsa lib32-alsa-lib lib32-alsa-plugins lib32-alsa-oss       \
         lib32-gnutls lib32-sdl2 lib32-gst-plugins-base lib32-gst-plugins-base-libs lib32-gst-plugins-good  \
-        gst-libav gst-plugins-bad gst-plugins-base lib32-pipewire-jack lib32-pipewire                      \
+        gst-libav gst-plugins-bad gst-plugins-base lib32-pipewire-jack lib32-pipewire fuse                 \
         gst-plugins-good gst-plugins-ugly gst-plugin-pipewire gstreamer-vaapi gstreamer lib32-openal       \
         libde265 gimp jre17-openjdk neofetch ufw steam lutris firefox pavucontrol-qt mpv lmms winetricks 2>&1 | tee -a "$LOG"
 
