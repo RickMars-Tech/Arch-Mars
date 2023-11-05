@@ -56,63 +56,16 @@ sudo flatpak install -y net.davidotek.pupgui2 org.mamedev.MAME com.discordapp.Di
 
 # Instalacion de herramientas
 echo "Instalando Herramientas y Aplicaciones"
-pacman -S zsh
-        ttf-daddytime-mono-nerd  
-        ffmpeg
-        ffmpegthumbnailer
-        vapoursynth
-        kitty
-        lib32-mesa                 
-        vulkan-radeon                  
-        lib32-vulkan-radeon         
-        vulkan-icd-loader               
-        lib32-vulkan-icd-loader         
-        gamemode                        
-        lib32-gamemode 
-        wine-staging                   
-        wine-gecko                      
-        wine-mono                      
-        lib32-alsa-lib                   
-        lib32-alsa-plugins              
-        lib32-pipewire                   
-        pipewire-pulse              
-        lib32-libpulse                 
-        pipewire-alsa 
-        lib32-alsa-lib 
-        lib32-alsa-plugins 
-        lib32-alsa-oss               
-        lib32-gnutls                
-        lib32-sdl2                      
-        lib32-gst-plugins-base           
-        lib32-gst-plugins-base-libs
-        lib32-gst-plugins-good           
-        lib32-gst-plugins-bad            
-        lib32-gst-plugins-ugly           
-        gst-libav                       
-        gst-plugins-bad                 
-        gst-plugins-base                 
-        gst-plugins-good           
-        gst-plugins-ugly              
-        gst-plugin-pipewire           
-        gstreamer-vaapi                  
-        winetricks                      
-        gst-plugin-libde265              
-        gst-plugin-openh264             
-        gstreamer 
+pacman -S  --needed zsh ttf-daddytime-mono-nerd ffmpeg ffmpegthumbnailer vapoursynth kitty lib32-mesa      \
+        vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader gamemode neovim        \
+        lib32-gamemode wine-staging wine-gecko wine-mono lib32-alsa-lib lib32-alsa-plugins lib32-pipewire  \
+        pipewire-pulse lib32-libpulse pipewire-alsa lib32-alsa-lib lib32-alsa-plugins lib32-alsa-oss       \
+        lib32-gnutls lib32-sdl2 lib32-gst-plugins-base lib32-gst-plugins-base-libs lib32-gst-plugins-good  \
+        lib32-gst-plugins-bad lib32-gst-plugins-ugly gst-libav gst-plugins-bad gst-plugins-base            \
+        gst-plugins-good gst-plugins-ugly gst-plugin-pipewire gstreamer-vaapi gstreamer lib32-openal       \
+        libde265 vkbasalt gimp jre17-openjdk neofetch ufw steam lutris firefox pavucontrol-qt mpv lmms winetricks 2>&1 | tee -a "$LOG"
 
-paru -S bottles pamac-aur  
-
-paru -S bleachbit bottles pamac-aur otf-font-awesome gotop-bin alsa-lib adobe-source-han-sans-kr-fonts     \
-    ttf-daddytime-mono-nerd stacer-bin alsa-plugins bat cups appimagelauncher ffmpeg ffmpegthumbnailer     \
-    vapoursynth gamemode gamescope-plus geforcenow-electron giflib gnome-bluetooth-3.0 wlogout             \
-    gnome-disk-utility gnutls gjs firefox gst-plugins-base-libs gimp jre17-openjdk jq  libadwaita     \
-    lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls lib32-gamemode lib32-gst-plugins-base-libs \
-    lib32-libldap libappimage vkbasalt lib32-mesa lib32-ncurses lib32-openal lib32-ocl-icd lib32-v4l-utils \
-    lmms lib32-vulkan-icd-loader lib32-vulkan-radeon libgpg-error libjpeg-turbo libldap libpng libpulse    \
-    libxslt libva lutris mouse_m908 mpv nautilus nawk neovim neofetch  noise-suppression-for-voice ocl-icd \
-    openal papirus-icon-theme pavucontrol polkit-gnome python qt5-wayland qt5ct qt6-wayland ranger         \
-    rife-ncnn-vulkan rofi socat steam  thunderbird tumbler ufw  v4l-utils virt-manager vulkan-icd-loader   \
-    vulkan-radeon wayland wine-staging winetricks wl-clipboard xorg-xwayland pipewire zsh 2>&1 | tee -a "$LOG"
+paru -S bottles pamac-aur rife-ncnn-vulkan gst-plugin-openh264 2>&1 | tee -a "$LOG"
 
 # Recargar Fuentes
 fc-cache -vf
